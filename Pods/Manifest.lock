@@ -1,0 +1,16 @@
+PODS:
+  - JTAppleCalendar (7.1.6)
+
+DEPENDENCIES:
+  - JTAppleCalendar
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JTAppleCalendar
+
+SPEC CHECKSUMS:
+  JTAppleCalendar: abb30678f42a4ef8a340a932b1dcb8c85a33dac2
+
+PODFILE CHECKSUM: c8db8d9cdfcc2457e6937543f1f1893a3303cbaa
+
+COCOAPODS: 1.5.3
