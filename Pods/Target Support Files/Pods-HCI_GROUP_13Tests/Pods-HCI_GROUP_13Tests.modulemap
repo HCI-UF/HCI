@@ -1,6 +1,0 @@
-framework module Pods_HCI_GROUP_13Tests {
-  umbrella header "Pods-HCI_GROUP_13Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
