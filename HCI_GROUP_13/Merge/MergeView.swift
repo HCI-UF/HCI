@@ -22,9 +22,20 @@ class MergeView: UIViewController {
     
     var ref: DatabaseReference!
     var databaseHandle:DatabaseHandle?
-    var tasks = [String]()
     
-    var eventNumber = 1
+    struct task{
+        
+        var name: String?
+        var description: String?
+        var category: String?
+        var priority: String?
+        var remind: String?
+        
+    }
+    
+    var tasks = [task]()
+    
+    var eventNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,19 +43,16 @@ class MergeView: UIViewController {
         
         prevButton.tag = 0
         nextButton.tag = 1
-        ref = Database.database().reference()
         
-        databaseHandle = ref?.child("Test").observe(.childAdded, with: { (snapshot) in
-            
-            let task = snapshot.value as? String
-            
-            if let actualTask = task {
-                self.tasks.append(actualTask)
-                
-            }
+        updateTaskList()
         
-            
-        })
+       /* let currStruct = tasks[eventNumber]
+        eventName.text = currStruct.name
+        eventDesc.text = currStruct.description
+        eventCat.text = currStruct.category
+        eventPrio.text = currStruct.priority
+        eventRem.text = currStruct.remind
+        */
     }
     
 
@@ -55,71 +63,98 @@ class MergeView: UIViewController {
     @IBAction func goToTaskView(_ sender: UIBarButtonItem) {
     }
     
-   /*
-    @IBAction func nextEventButton(_ sender: Any) {
-        eventNumber = eventNumber + 1
-        eventName.text = String(eventNumber)
-        eventDesc.text = "Right"
-        eventCat.text = "Right"
-        eventPrio.text = "Right"
-        eventRem.text = "Right"
-        self.viewDidLoad()
-
-    }
-    
-    
-    @IBAction func prevEventButton(_ sender: Any) {
-        eventNumber = eventNumber - 1
-        eventName.text = String(eventNumber)
-        eventDesc.text = "Left"
-        eventCat.text = "Left"
-        eventPrio.text = "Left"
-        eventRem.text = "Left"
-        
-        self.viewDidLoad()
-    }
-    */
     
     @IBAction func prevNextEvent(_ sender: UIButton) {
         
         
-        self.viewDidLoad()
-
         if (sender.tag == 1){
             eventNumber = eventNumber + 1
-            eventName.text = tasks[eventNumber]
-            eventDesc.text = "Right"
-            eventCat.text = "Right"
-            eventPrio.text = "Right"
-            eventRem.text = "Right"
+            let currStruct = tasks[eventNumber]
+            eventName.text = currStruct.name
+            eventDesc.text = currStruct.description
+            eventCat.text = currStruct.category
+            eventPrio.text = currStruct.priority
+            eventRem.text = currStruct.remind
         }
-        if(sender.tag == 0){
+        else if(sender.tag == 0){
             eventNumber = eventNumber - 1
-            eventName.text = tasks[eventNumber]
-            eventDesc.text = "Left"
-            eventCat.text = "Left"
-            eventPrio.text = "Left"
-            eventRem.text = "Left"
+            let currStruct = tasks[eventNumber]
+
+            eventName.text = currStruct.name
+            eventDesc.text = currStruct.description
+            eventCat.text = currStruct.category
+            eventPrio.text = currStruct.priority
+            eventRem.text = currStruct.remind
         }
         
-        if(eventNumber == 1){
+        if(eventNumber == 0){
             prevButton.isHidden = true
         }
         else{
             prevButton.isHidden = false
         }
         
-        if(eventNumber == 7){
+        if(eventNumber == 2){
             nextButton.isHidden = true
         }
         else{
             nextButton.isHidden = false
         }
-     
-        
     }
     
 
+    func updateTaskList(){
+        
+        var currTask = task(name: "", description: "", category: "", priority: "", remind: "")
+        
+        ref = Database.database().reference()
+        
+        databaseHandle = ref?.child("TaskView").observe(.value, with: { (snapshot) in
+            
+            if(snapshot.exists() == false){
+                //Data Not Found -- Nothing Happens
+            }
+            else{
+                
+                let enumerator = snapshot.children
+                
+                while let rest = enumerator.nextObject() as? DataSnapshot {
+                    
+                    let enumerator2 = rest.children
+                    
+                    while let rest2 = enumerator2.nextObject() as? DataSnapshot{
+                        
+                        let taskKey = rest2.key
+                        
+                        if(taskKey == "Name"){
+                            currTask.name = rest2.value as? String
+                        }
+                        else if (taskKey == "Description"){
+                            currTask.description = rest2.value as? String
+                        }
+                        else if (taskKey == "Category"){
+                            currTask.category = rest2.value as? String
+                        }
+                        else if (taskKey == "Priority"){
+                            currTask.priority = rest2.value as? String
+                        }
+                        else if (taskKey == "Remind"){
+                            currTask.remind = rest2.value as? String
+                        }
+                        
+                        
+                    }
+                    
+                    self.tasks.append(currTask)
+                    
+                }
+                
+            
+            }
+            
+        })
+        
+    }
     
     
     
