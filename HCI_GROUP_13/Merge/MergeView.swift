@@ -10,6 +10,17 @@ import UIKit
 
 class MergeView: UIViewController {
 
+    @IBOutlet weak var eventName: UILabel!
+    @IBOutlet weak var eventDesc: UILabel!
+    @IBOutlet weak var eventCat: UILabel!
+    @IBOutlet weak var eventPrio: UILabel!
+    @IBOutlet weak var eventRem: UILabel!
+    @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    
+    var eventNumber = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +34,35 @@ class MergeView: UIViewController {
     
     @IBAction func goToTaskView(_ sender: UIBarButtonItem) {
     }
+    
+    
+    @IBAction func nextEventButton(_ sender: Any) {
+        eventNumber = eventNumber + 1
+        eventName.text = String(eventNumber)
+        eventDesc.text = "Right"
+        eventCat.text = "Right"
+        eventPrio.text = "Right"
+        eventRem.text = "Right"
+        self.viewDidLoad()
+
+    }
+    
+    
+    @IBAction func prevEventButton(_ sender: Any) {
+        eventNumber = eventNumber - 1
+        eventName.text = String(eventNumber)
+        eventDesc.text = "Left"
+        eventCat.text = "Left"
+        eventPrio.text = "Left"
+        eventRem.text = "Left"
+        
+        self.viewDidLoad()
+    }
+    
+
+    
+    
+    
     
     
     
