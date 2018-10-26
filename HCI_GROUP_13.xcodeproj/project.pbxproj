@@ -10,7 +10,6 @@
 		03D5C988217FE2B400510FDF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C987217FE2B400510FDF /* CustomCell.swift */; };
 		03D5C98A217FE2BD00510FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C989217FE2BD00510FDF /* ViewController.swift */; };
 		03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D5C98B217FE2FC00510FDF /* calendar.storyboard */; };
-		03D5C9922180FA6400510FDF /* merge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D5C9902180FA6400510FDF /* merge.xib */; };
 		03D5C9932180FA6400510FDF /* MergeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C9912180FA6400510FDF /* MergeView.swift */; };
 		03D5C9952180FAB700510FDF /* merge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D5C9942180FAB700510FDF /* merge.storyboard */; };
 		622B80522178A2F0005FEF00 /* CellDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622B80512178A2F0005FEF00 /* CellDescViewController.swift */; };
@@ -23,6 +22,7 @@
 		62802210216FA49700CA1168 /* HCI_GROUP_13UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6280220F216FA49700CA1168 /* HCI_GROUP_13UITests.swift */; };
 		62830E812179135E004FCF65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62830E802179135E004FCF65 /* AppDelegate.swift */; };
 		629CA6C1216FA722003DBA7B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CA6C0216FA722003DBA7B /* TaskManager.swift */; };
+		D677525621829A7D008EE594 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = D677525521829A7D008EE594 /* Images */; };
 		E70BDA8460290E8D80BD0351 /* Pods_HCI_GROUP_13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B4EC621848FFDB62B9FEC0 /* Pods_HCI_GROUP_13.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,6 @@
 		03D5C987217FE2B400510FDF /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		03D5C989217FE2BD00510FDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03D5C98B217FE2FC00510FDF /* calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = calendar.storyboard; sourceTree = "<group>"; };
-		03D5C9902180FA6400510FDF /* merge.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = merge.xib; sourceTree = "<group>"; };
 		03D5C9912180FA6400510FDF /* MergeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeView.swift; sourceTree = "<group>"; };
 		03D5C9942180FAB700510FDF /* merge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = merge.storyboard; sourceTree = "<group>"; };
 		292B1AC9A687C4701219B69F /* Pods-HCI_GROUP_13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		62802211216FA49700CA1168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62830E802179135E004FCF65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629CA6C0216FA722003DBA7B /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		D677525521829A7D008EE594 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		FE368118E8D5AA198BF3A6A0 /* Pods-HCI_GROUP_13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,7 +121,7 @@
 		03D5C98F2180F9C600510FDF /* Merge */ = {
 			isa = PBXGroup;
 			children = (
-				03D5C9902180FA6400510FDF /* merge.xib */,
+				D677525521829A7D008EE594 /* Images */,
 				03D5C9912180FA6400510FDF /* MergeView.swift */,
 				03D5C9942180FAB700510FDF /* merge.storyboard */,
 			);
@@ -311,8 +311,8 @@
 			files = (
 				628021FA216FA49700CA1168 /* LaunchScreen.storyboard in Resources */,
 				628021F7216FA49700CA1168 /* Assets.xcassets in Resources */,
+				D677525621829A7D008EE594 /* Images in Resources */,
 				03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */,
-				03D5C9922180FA6400510FDF /* merge.xib in Resources */,
 				628021F5216FA49000CA1168 /* Main.storyboard in Resources */,
 				03D5C9952180FAB700510FDF /* merge.storyboard in Resources */,
 			);
