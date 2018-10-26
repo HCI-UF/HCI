@@ -23,6 +23,7 @@
 		62830E812179135E004FCF65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62830E802179135E004FCF65 /* AppDelegate.swift */; };
 		629CA6C1216FA722003DBA7B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CA6C0216FA722003DBA7B /* TaskManager.swift */; };
 		D677525621829A7D008EE594 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = D677525521829A7D008EE594 /* Images */; };
+		D6D906E92182DA8D00AC598A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D906E82182DA8D00AC598A /* GoogleService-Info.plist */; };
 		E70BDA8460290E8D80BD0351 /* Pods_HCI_GROUP_13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B4EC621848FFDB62B9FEC0 /* Pods_HCI_GROUP_13.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		62830E802179135E004FCF65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629CA6C0216FA722003DBA7B /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		D677525521829A7D008EE594 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		D6D906E82182DA8D00AC598A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE368118E8D5AA198BF3A6A0 /* Pods-HCI_GROUP_13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 		628021E1216FA49000CA1168 = {
 			isa = PBXGroup;
 			children = (
+				D6D906E82182DA8D00AC598A /* GoogleService-Info.plist */,
 				628021EC216FA49000CA1168 /* HCI_GROUP_13 */,
 				62802203216FA49700CA1168 /* HCI_GROUP_13Tests */,
 				6280220E216FA49700CA1168 /* HCI_GROUP_13UITests */,
@@ -315,6 +318,7 @@
 				03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */,
 				628021F5216FA49000CA1168 /* Main.storyboard in Resources */,
 				03D5C9952180FAB700510FDF /* merge.storyboard in Resources */,
+				D6D906E92182DA8D00AC598A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,13 +348,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

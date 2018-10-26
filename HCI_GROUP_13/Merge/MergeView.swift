@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class MergeView: UIViewController {
 
@@ -19,6 +20,10 @@ class MergeView: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     
+    var ref: DatabaseReference!
+    var databaseHandle:DatabaseHandle?
+    var tasks = [String]()
+    
     var eventNumber = 1
     
     override func viewDidLoad() {
@@ -27,7 +32,19 @@ class MergeView: UIViewController {
         
         prevButton.tag = 0
         nextButton.tag = 1
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
+        
+        databaseHandle = ref?.child("Test").observe(.childAdded, with: { (snapshot) in
+            
+            let task = snapshot.value as? String
+            
+            if let actualTask = task {
+                self.tasks.append(actualTask)
+                
+            }
+        
+            
+        })
     }
     
 
@@ -65,25 +82,38 @@ class MergeView: UIViewController {
     
     @IBAction func prevNextEvent(_ sender: UIButton) {
         
+        
+        self.viewDidLoad()
+
         if (sender.tag == 1){
             eventNumber = eventNumber + 1
-            eventName.text = String(eventNumber)
+            eventName.text = tasks[eventNumber]
             eventDesc.text = "Right"
             eventCat.text = "Right"
             eventPrio.text = "Right"
             eventRem.text = "Right"
-            self.viewDidLoad()
-
         }
         if(sender.tag == 0){
             eventNumber = eventNumber - 1
-            eventName.text = String(eventNumber)
+            eventName.text = tasks[eventNumber]
             eventDesc.text = "Left"
             eventCat.text = "Left"
             eventPrio.text = "Left"
             eventRem.text = "Left"
-            self.viewDidLoad()
-            
+        }
+        
+        if(eventNumber == 1){
+            prevButton.isHidden = true
+        }
+        else{
+            prevButton.isHidden = false
+        }
+        
+        if(eventNumber == 7){
+            nextButton.isHidden = true
+        }
+        else{
+            nextButton.isHidden = false
         }
      
         
