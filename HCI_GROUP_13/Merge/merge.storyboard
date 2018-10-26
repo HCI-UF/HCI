@@ -20,18 +20,20 @@
                             <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxB-iq-zTh" userLabel="Prev Event Button">
                                 <rect key="frame" x="97" y="515" width="48" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="left"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button" image="first"/>
                                 <connections>
-                                    <action selector="prevEventButton:" destination="d50-Lo-09E" eventType="touchUpInside" id="GP5-6L-trt"/>
+                                    <action selector="prevNextEvent:" destination="d50-Lo-09E" eventType="touchUpInside" id="Nqa-1Q-PGi"/>
                                 </connections>
                             </button>
                             <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw9-mq-PHZ" userLabel="Next Event Button">
                                 <rect key="frame" x="230" y="515" width="48" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="right"/>
                                 <state key="normal" title="Button" image="second"/>
                                 <connections>
-                                    <action selector="nextEventButton:" destination="d50-Lo-09E" eventType="touchUpInside" id="pCe-pw-zq5"/>
+                                    <action selector="prevNextEvent:" destination="d50-Lo-09E" eventType="touchUpInside" id="0tv-YI-JcM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-As-JWu">
@@ -121,6 +123,7 @@
                         <outlet property="eventName" destination="rdF-Pe-rb9" id="aYP-Ml-4FC"/>
                         <outlet property="eventPrio" destination="sEW-6f-UfQ" id="Lc4-Ok-Q7X"/>
                         <outlet property="eventRem" destination="hDp-qS-kgh" id="bzC-tN-xWq"/>
+                        <outlet property="nextButton" destination="Sw9-mq-PHZ" id="sjh-47-NSE"/>
                         <outlet property="prevButton" destination="DxB-iq-zTh" id="Rvt-tM-RBY"/>
                     </connections>
                 </viewController>
