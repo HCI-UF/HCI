@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
+
 class MergeView: UIViewController {
 
     @IBOutlet weak var taskName: UILabel!
@@ -17,20 +18,21 @@ class MergeView: UIViewController {
     @IBOutlet weak var taskRem: UILabel!
     @IBOutlet weak var taskCat: UILabel!
     
-    @IBOutlet weak var eventName: UILabel!
-    @IBOutlet weak var eventDate: UILabel!
-    @IBOutlet weak var eventTimeStart: UILabel!
-    @IBOutlet weak var eventTimeEnd: UILabel!
-    @IBOutlet weak var eventLoc: UILabel!
-    @IBOutlet weak var eventCat: UILabel!
-    @IBOutlet weak var eventPrio: UILabel!
-    @IBOutlet weak var eventNoti: UILabel!
+    @IBOutlet  var eventName: UILabel!
+    @IBOutlet  var eventDate: UILabel!
+    @IBOutlet  var eventTimeStart: UILabel!
+    @IBOutlet  var eventTimeEnd: UILabel!
+    @IBOutlet  var eventLoc: UILabel!
+    @IBOutlet  var eventCat: UILabel!
+    @IBOutlet  var eventPrio: UILabel!
+    @IBOutlet  var eventNoti: UILabel!
     
     
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var showTask: UIView!
     @IBOutlet weak var showEvent: UIView!
+    @IBOutlet var entireView: UIView!
     
     
     var ref: DatabaseReference!
@@ -63,17 +65,9 @@ class MergeView: UIViewController {
     
     var tasks = [task]()
     var events = [event]()
-    var merged = [Any]()
+    var merged = [event]()
     
     var iterator = 0
-    
-    
-    @IBAction func goToCalendarView(_ sender: UIBarButtonItem) {
-    }
-    
-    
-    @IBAction func goToTaskView(_ sender: UIBarButtonItem) {
-    }
     
     
     func updateTask(){
@@ -83,7 +77,9 @@ class MergeView: UIViewController {
         taskCat.text = "Category: " + currStruct.category
         taskPrio.text = "Priority: " + currStruct.priority
         taskRem.text = "Remind: " + currStruct.remind
-    
+        showTask.reloadInputViews()
+        print(taskName.text)
+        
     }
     
     func updateEvent(){
@@ -96,7 +92,6 @@ class MergeView: UIViewController {
         eventCat.text = "Category: " + currStruct.category
         eventPrio.text = "Priority: " + currStruct.priority
         eventNoti.text = "Notify: " + currStruct.notify
-        
     }
     
     @IBAction func prevNextEvent(_ sender: UIButton) {
@@ -110,6 +105,7 @@ class MergeView: UIViewController {
         else if(sender.tag == 0){
             iterator = iterator - 1
             updateEvent()
+            
         }
         
         if(iterator == 0){
@@ -126,14 +122,18 @@ class MergeView: UIViewController {
             nextButton.isHidden = false
         }
         
-        updateEventsList()
+        print(iterator)
+        //updateEventsList()
+        updateMergedList()
+
+        
         
     }
     
     
     func updateTaskList(){
         
-        tasks.removeAll()
+        self.tasks.removeAll()
         
         var currTask = task(name: "", description: "", category: "", priority: "", remind: "")
         
@@ -175,7 +175,9 @@ class MergeView: UIViewController {
                         
                     }
                     
+                    //print(currTask)
                     self.tasks.append(currTask)
+                    //self.merged.append(currTask)
                     
                 }
                 
@@ -246,6 +248,8 @@ class MergeView: UIViewController {
                     }
                     
                     self.events.append(currEvent)
+                    self.merged.append(currEvent)
+
                     
                 }
                 
@@ -258,16 +262,17 @@ class MergeView: UIViewController {
     
     
     
-    func updateMerged(){
+    func updateMergedList(){
         
-        //merged.removeAll()
+        merged.removeAll()
         
         //updateTaskList()
-        //updateEventsList()
+        updateEventsList()
         
-        //self.merged.append(tasks)
-        //self.merged.append(events)
-        //print(merged)
+        print(merged)
+        print(events)
+        print(tasks)
+        //print(events.count)
         
     }
  

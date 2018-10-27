@@ -70,7 +70,7 @@
                                 </items>
                                 <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-Ra-QJ0" userLabel="Task">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-Ra-QJ0" userLabel="TaskDisplay">
                                 <rect key="frame" x="0.0" y="140" width="375" height="358"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -179,6 +179,9 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category: alskjdf;lkjaskdfja;lkjfd;lkjakldf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-68-vCU" userLabel="Event Category">
                                         <rect key="frame" x="63" y="204" width="248" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" updatesFrequently="YES"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -204,8 +207,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="pAh-fb-FQO"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0cb-Ra-QJ0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="entireView" destination="Gl6-LZ-KvS" id="6Q3-pO-EaX"/>
                         <outlet property="eventCat" destination="6Ga-68-vCU" id="ogB-UM-5cV"/>
                         <outlet property="eventDate" destination="AqV-40-mcN" id="3E9-ag-STC"/>
                         <outlet property="eventLoc" destination="Pn9-PB-IoT" id="6mQ-3e-jKE"/>
