@@ -8,5 +8,6 @@ target 'HCI_GROUP_13' do
     # Pods for testing
 project '/Users/josh/Desktop/HCI/HCI_GROUP_13.xcodeproj'
 pod 'JTAppleCalendar'
-
+pod 'Firebase/Core'
+pod 'Firebase/Database'
 end
