@@ -6,8 +6,9 @@ target 'HCI_GROUP_13' do
   use_frameworks!
 
     # Pods for testing
-project '/Users/josh/Desktop/HCI/HCI_GROUP_13.xcodeproj'
+project '/Users/johnmooney/Documents/Github/HCI/HCI_GROUP_13.xcodeproj'
 pod 'JTAppleCalendar'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+
 end
