@@ -192,6 +192,8 @@ class MergeView: UIViewController {
     func updateEventsList(){
         
         events.removeAll()
+        print("This is the events list after removal: ")
+        print(events)
         
         var currEvent = event(name: "", description: "", date: 0, allDay: false, timeStart: 0, timeEnd: 0, location: "", category: "", priority: "", notify: "")
         
@@ -249,6 +251,8 @@ class MergeView: UIViewController {
                     
                     self.events.append(currEvent)
                     self.merged.append(currEvent)
+                    print("This is the events list after adding: ")
+                    print(self.events)
 
                     
                 }
@@ -265,13 +269,12 @@ class MergeView: UIViewController {
     func updateMergedList(){
         
         merged.removeAll()
-        
         //updateTaskList()
-        updateEventsList()
-        
-        print(merged)
+        self.updateEventsList()
+        //print(merged)
+        print("This is the events list after adding is finished: ")
         print(events)
-        print(tasks)
+        //print(tasks)
         //print(events.count)
         
     }
