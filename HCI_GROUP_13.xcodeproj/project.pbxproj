@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03BA7B612184D96600AF5F3E /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BA7B602184D96600AF5F3E /* right-arrow.png */; };
+		03BA7B632184FD9800AF5F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03BA7B622184FD9800AF5F3E /* GoogleService-Info.plist */; };
 		03D5C988217FE2B400510FDF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C987217FE2B400510FDF /* CustomCell.swift */; };
 		03D5C98A217FE2BD00510FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C989217FE2BD00510FDF /* ViewController.swift */; };
 		03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D5C98B217FE2FC00510FDF /* calendar.storyboard */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		03BA7B602184D96600AF5F3E /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow.png"; sourceTree = "<group>"; };
+		03BA7B622184FD9800AF5F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		03D5C987217FE2B400510FDF /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		03D5C989217FE2BD00510FDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03D5C98B217FE2FC00510FDF /* calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = calendar.storyboard; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		628021EC216FA49000CA1168 /* HCI_GROUP_13 */ = {
 			isa = PBXGroup;
 			children = (
+				03BA7B622184FD9800AF5F3E /* GoogleService-Info.plist */,
 				03D5C98F2180F9C600510FDF /* Merge */,
 				03D5C98E2180F80600510FDF /* Tasks */,
 				03D5C98D2180F7E100510FDF /* Calendar */,
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BA7B612184D96600AF5F3E /* right-arrow.png in Resources */,
+				03BA7B632184FD9800AF5F3E /* GoogleService-Info.plist in Resources */,
 				628021FA216FA49700CA1168 /* LaunchScreen.storyboard in Resources */,
 				628021F7216FA49700CA1168 /* Assets.xcassets in Resources */,
 				03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */,
