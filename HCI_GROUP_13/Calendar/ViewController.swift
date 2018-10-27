@@ -77,7 +77,7 @@ class ViewController: UIViewController {
 extension ViewController: JTAppleCalendarViewDataSource {
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        let cell = cell as! CustomCell
+        _ = cell as! CustomCell
     }
     
     
