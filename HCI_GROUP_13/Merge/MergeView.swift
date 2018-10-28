@@ -65,9 +65,51 @@ class MergeView: UIViewController {
     
     var tasks = [task]()
     var events = [event]()
-    var merged = [event]()
+    var merged = [Any]()
     
     var iterator = 0
+    
+    
+    func updateView(){
+        
+        let currStruct = merged[iterator]
+        
+        if currStruct is task{
+            
+            showTask.isHidden = false
+            showEvent.isHidden = true
+            
+            let currTask = currStruct as! task
+            
+            taskName.text = currTask.name
+            taskDesc.text = "Description: " + currTask.description
+            taskCat.text = "Category: " + currTask.category
+            taskPrio.text = "Priority: " + currTask.priority
+            taskRem.text = "Remind: " + currTask.remind
+            
+        }
+        
+        if currStruct is event{
+            
+            showTask.isHidden = true
+            showEvent.isHidden = false
+            
+            let currEvent = currStruct as! event
+            
+            eventName.text = currEvent.name
+            eventDate.text = "Date: " + String(currEvent.date)
+            eventTimeStart.text = "Time Start: " + String(currEvent.timeStart)
+            eventTimeEnd.text = "Time End: " + String(currEvent.timeEnd)
+            eventLoc.text = "Location: " + currEvent.location
+            eventCat.text = "Category: " + currEvent.category
+            eventPrio.text = "Priority: " + currEvent.priority
+            eventNoti.text = "Notify: " + currEvent.notify
+  
+        }
+        
+        
+        
+    }
     
     
     func updateTask(){
@@ -77,12 +119,17 @@ class MergeView: UIViewController {
         taskCat.text = "Category: " + currStruct.category
         taskPrio.text = "Priority: " + currStruct.priority
         taskRem.text = "Remind: " + currStruct.remind
-        showTask.reloadInputViews()
-        print(taskName.text)
+        
         
     }
     
     func updateEvent(){
+        /*print("This is being printed during updateEvent method: ")
+        print(events)
+        print(tasks)*/
+        
+        sort()
+        
         let currStruct = events[iterator]
         eventName.text = currStruct.name
         eventDate.text = "Date: " + String(currStruct.date)
@@ -94,19 +141,54 @@ class MergeView: UIViewController {
         eventNoti.text = "Notify: " + currStruct.notify
     }
     
+    func sort(){
+    
+        //print(tasks)
+       // print(events)
+ 
+        let date = Date()
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from:date)
+       
+        
+        print(year)
+        print(month)
+        print(day)
+        print(hour)
+        print(minutes)
+    
+    }
+    
+    
+    
+    
     @IBAction func prevNextEvent(_ sender: UIButton) {
         
         //updateMerged()
         
+        print(merged)
+        print("merged count is: ")
+        print(merged.count - 1)
+        
         if (sender.tag == 1){
             iterator = iterator + 1
-            updateEvent()
+            print("iterator is: ")
+            print(iterator)
+            updateView()
         }
         else if(sender.tag == 0){
             iterator = iterator - 1
-            updateEvent()
+            print("iterator is: ")
+            print(iterator)
+            updateView()
             
         }
+        
+        
         
         if(iterator == 0){
             prevButton.isHidden = true
@@ -115,16 +197,18 @@ class MergeView: UIViewController {
             prevButton.isHidden = false
         }
         
-        if(iterator == (events.count - 1)){
+        if(iterator == (merged.count - 1)){
             nextButton.isHidden = true
         }
         else{
             nextButton.isHidden = false
         }
         
-        print(iterator)
+        //print(iterator)
         //updateEventsList()
-        updateMergedList()
+        
+        updateData()
+        
 
         
         
@@ -177,7 +261,8 @@ class MergeView: UIViewController {
                     
                     //print(currTask)
                     self.tasks.append(currTask)
-                    //self.merged.append(currTask)
+                    self.merged.append(currTask)
+                    
                     
                 }
                 
@@ -186,14 +271,27 @@ class MergeView: UIViewController {
             
         })
         
+        
+    }
+    
+    
+    func updateData(){
+        
+        merged.removeAll()
+        
+        updateEventsList()
+        updateTaskList()
+        
+
+    
     }
     
     
     func updateEventsList(){
         
         events.removeAll()
-        print("This is the events list after removal: ")
-        print(events)
+        //print("This is the events list after removal: ")
+        //print(events)
         
         var currEvent = event(name: "", description: "", date: 0, allDay: false, timeStart: 0, timeEnd: 0, location: "", category: "", priority: "", notify: "")
         
@@ -251,34 +349,20 @@ class MergeView: UIViewController {
                     
                     self.events.append(currEvent)
                     self.merged.append(currEvent)
-                    print("This is the events list after adding: ")
-                    print(self.events)
+                   // print("This is the events list after adding: ")
+                   // print(self.events)
 
-                    
                 }
                 
-                
             }
-            
         })
         
-    }
-    
-    
-    
-    func updateMergedList(){
-        
-        merged.removeAll()
-        //updateTaskList()
-        self.updateEventsList()
-        //print(merged)
-        print("This is the events list after adding is finished: ")
-        print(events)
-        //print(tasks)
-        //print(events.count)
+        //print("This is the events list at the very end of the function: ")
+        //print(events)
+        //print(self.events)
         
     }
- 
+    
     
     override func viewDidLoad() {
         
@@ -287,8 +371,7 @@ class MergeView: UIViewController {
         prevButton.tag = 0
         nextButton.tag = 1
         
-        //updateTaskList()
-        updateEventsList()
+        updateData()
         
         super.viewDidLoad()
         
