@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		03BA7B612184D96600AF5F3E /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BA7B602184D96600AF5F3E /* right-arrow.png */; };
-		03BA7B632184FD9800AF5F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03BA7B622184FD9800AF5F3E /* GoogleService-Info.plist */; };
 		03D5C988217FE2B400510FDF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C987217FE2B400510FDF /* CustomCell.swift */; };
 		03D5C98A217FE2BD00510FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C989217FE2BD00510FDF /* ViewController.swift */; };
 		03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D5C98B217FE2FC00510FDF /* calendar.storyboard */; };
@@ -22,10 +21,10 @@
 		62802210216FA49700CA1168 /* HCI_GROUP_13UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6280220F216FA49700CA1168 /* HCI_GROUP_13UITests.swift */; };
 		62830E812179135E004FCF65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62830E802179135E004FCF65 /* AppDelegate.swift */; };
 		629CA6C1216FA722003DBA7B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CA6C0216FA722003DBA7B /* TaskManager.swift */; };
-		D6441140218657ED006C11C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D644113F218657ED006C11C5 /* GoogleService-Info.plist */; };
+		7E5F9B390185A969ACE73E2E /* Pods_HCI_GROUP_13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99720EC84E65287BC714E5C9 /* Pods_HCI_GROUP_13.framework */; };
 		D644114221865855006C11C5 /* merge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D644114121865855006C11C5 /* merge.storyboard */; };
 		D644114421865865006C11C5 /* MergeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644114321865865006C11C5 /* MergeView.swift */; };
-		E70BDA8460290E8D80BD0351 /* Pods_HCI_GROUP_13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B4EC621848FFDB62B9FEC0 /* Pods_HCI_GROUP_13.framework */; };
+		D644114821866C2F006C11C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D644114721866C2F006C11C5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +46,10 @@
 
 /* Begin PBXFileReference section */
 		03BA7B602184D96600AF5F3E /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow.png"; sourceTree = "<group>"; };
-		03BA7B622184FD9800AF5F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		03D5C987217FE2B400510FDF /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		03D5C989217FE2BD00510FDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03D5C98B217FE2FC00510FDF /* calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = calendar.storyboard; sourceTree = "<group>"; };
-		292B1AC9A687C4701219B69F /* Pods-HCI_GROUP_13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.debug.xcconfig"; sourceTree = "<group>"; };
-		54B4EC621848FFDB62B9FEC0 /* Pods_HCI_GROUP_13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HCI_GROUP_13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		070A59E0A3982DE26B23C92C /* Pods-HCI_GROUP_13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.release.xcconfig"; sourceTree = "<group>"; };
 		622B80512178A2F0005FEF00 /* CellDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDescViewController.swift; sourceTree = "<group>"; };
 		628021EA216FA49000CA1168 /* HCI_GROUP_13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCI_GROUP_13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		628021EF216FA49000CA1168 /* TaskTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableController.swift; sourceTree = "<group>"; };
@@ -69,10 +66,11 @@
 		62802211216FA49700CA1168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62830E802179135E004FCF65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629CA6C0216FA722003DBA7B /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
-		D644113F218657ED006C11C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99720EC84E65287BC714E5C9 /* Pods_HCI_GROUP_13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HCI_GROUP_13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C79460A8DFF67DE1FC6300 /* Pods-HCI_GROUP_13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.debug.xcconfig"; sourceTree = "<group>"; };
 		D644114121865855006C11C5 /* merge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = merge.storyboard; sourceTree = "<group>"; };
 		D644114321865865006C11C5 /* MergeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeView.swift; sourceTree = "<group>"; };
-		FE368118E8D5AA198BF3A6A0 /* Pods-HCI_GROUP_13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.release.xcconfig"; sourceTree = "<group>"; };
+		D644114721866C2F006C11C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70BDA8460290E8D80BD0351 /* Pods_HCI_GROUP_13.framework in Frameworks */,
+				7E5F9B390185A969ACE73E2E /* Pods_HCI_GROUP_13.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,13 +133,12 @@
 		628021E1216FA49000CA1168 = {
 			isa = PBXGroup;
 			children = (
-				D644113F218657ED006C11C5 /* GoogleService-Info.plist */,
 				628021EC216FA49000CA1168 /* HCI_GROUP_13 */,
 				62802203216FA49700CA1168 /* HCI_GROUP_13Tests */,
 				6280220E216FA49700CA1168 /* HCI_GROUP_13UITests */,
 				628021EB216FA49000CA1168 /* Products */,
-				9D31587FB0D80FD2D0F2C577 /* Pods */,
-				F5DB76519B78A8F70B29E96C /* Frameworks */,
+				FC9ECFAD1FDF1242AAEB7712 /* Pods */,
+				BE742D80738625980149DDDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,7 +155,7 @@
 		628021EC216FA49000CA1168 /* HCI_GROUP_13 */ = {
 			isa = PBXGroup;
 			children = (
-				03BA7B622184FD9800AF5F3E /* GoogleService-Info.plist */,
+				D644114721866C2F006C11C5 /* GoogleService-Info.plist */,
 				03D5C98F2180F9C600510FDF /* Merge */,
 				03D5C98E2180F80600510FDF /* Tasks */,
 				03D5C98D2180F7E100510FDF /* Calendar */,
@@ -189,21 +186,21 @@
 			path = HCI_GROUP_13UITests;
 			sourceTree = "<group>";
 		};
-		9D31587FB0D80FD2D0F2C577 /* Pods */ = {
+		BE742D80738625980149DDDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				292B1AC9A687C4701219B69F /* Pods-HCI_GROUP_13.debug.xcconfig */,
-				FE368118E8D5AA198BF3A6A0 /* Pods-HCI_GROUP_13.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F5DB76519B78A8F70B29E96C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				54B4EC621848FFDB62B9FEC0 /* Pods_HCI_GROUP_13.framework */,
+				99720EC84E65287BC714E5C9 /* Pods_HCI_GROUP_13.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC9ECFAD1FDF1242AAEB7712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2C79460A8DFF67DE1FC6300 /* Pods-HCI_GROUP_13.debug.xcconfig */,
+				070A59E0A3982DE26B23C92C /* Pods-HCI_GROUP_13.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,11 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62802214216FA49700CA1168 /* Build configuration list for PBXNativeTarget "HCI_GROUP_13" */;
 			buildPhases = (
-				CE9C0CA3072B26EF5E936DF4 /* [CP] Check Pods Manifest.lock */,
+				E22012ADF08A5E703F91D558 /* [CP] Check Pods Manifest.lock */,
 				628021E6216FA49000CA1168 /* Sources */,
 				628021E7216FA49000CA1168 /* Frameworks */,
 				628021E8216FA49000CA1168 /* Resources */,
-				713D44C79036DFE63A3C78AC /* [CP] Embed Pods Frameworks */,
+				D0B7707A36EBBCA07896C185 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,13 +313,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BA7B612184D96600AF5F3E /* right-arrow.png in Resources */,
-				03BA7B632184FD9800AF5F3E /* GoogleService-Info.plist in Resources */,
-				D6441140218657ED006C11C5 /* GoogleService-Info.plist in Resources */,
 				628021FA216FA49700CA1168 /* LaunchScreen.storyboard in Resources */,
 				628021F7216FA49700CA1168 /* Assets.xcassets in Resources */,
 				03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */,
 				628021F5216FA49000CA1168 /* Main.storyboard in Resources */,
 				D644114221865855006C11C5 /* merge.storyboard in Resources */,
+				D644114821866C2F006C11C5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +339,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		713D44C79036DFE63A3C78AC /* [CP] Embed Pods Frameworks */ = {
+		D0B7707A36EBBCA07896C185 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,7 +367,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CE9C0CA3072B26EF5E936DF4 /* [CP] Check Pods Manifest.lock */ = {
+		E22012ADF08A5E703F91D558 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -580,7 +576,7 @@
 		};
 		62802215216FA49700CA1168 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 292B1AC9A687C4701219B69F /* Pods-HCI_GROUP_13.debug.xcconfig */;
+			baseConfigurationReference = A2C79460A8DFF67DE1FC6300 /* Pods-HCI_GROUP_13.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -598,7 +594,7 @@
 		};
 		62802216216FA49700CA1168 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE368118E8D5AA198BF3A6A0 /* Pods-HCI_GROUP_13.release.xcconfig */;
+			baseConfigurationReference = 070A59E0A3982DE26B23C92C /* Pods-HCI_GROUP_13.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -241,20 +241,20 @@ class MergeView: UIViewController {
     
     func updateTaskList(){
         
-        self.tasks.removeAll()
+        //self.tasks.removeAll()
         
-        var currTask = task(name: "", description: "", category: "", priority: "", remind: "")
+        //var currTask = task(name: "", description: "", category: "", priority: "", remind: "")
         
-        ref = Database.database().reference()
-        
+        let ref = Database.database().reference()
+        /*
         databaseHandle = ref?.child("TaskView").observe(.value, with: { (snapshot) in
-            
+           
             if(snapshot.exists() == false){
                 //Data Not Found -- Nothing Happens
             }
             else{
                 
-                let enumerator = snapshot.children
+               let enumerator = snapshot.children
                 
                 while let rest = enumerator.nextObject() as? DataSnapshot {
                     
@@ -280,7 +280,7 @@ class MergeView: UIViewController {
                             currTask.remind = rest2.value as! String
                         }
                         
-                        
+ 
                     }
                     
                     //print(currTask)
@@ -293,7 +293,7 @@ class MergeView: UIViewController {
                 
             }
             
-        })
+        })*/
         
         
     }
@@ -318,6 +318,7 @@ class MergeView: UIViewController {
         //print(events)
         
         var currEvent = event(name: "", description: "", date: 0, allDay: false, timeStart: 0, timeEnd: 0, location: "", category: "", priority: "", notify: "")
+       
         
         ref = Database.database().reference()
         
@@ -400,7 +401,8 @@ class MergeView: UIViewController {
         
         //print("Test1")
         
-        updateData()
+        //updateData()
+        updateTaskList()
         
         //print("Test2")
         
