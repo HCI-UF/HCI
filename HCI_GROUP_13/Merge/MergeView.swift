@@ -144,7 +144,7 @@ class MergeView: UIViewController {
     func sort(){
     
         //print(tasks)
-       // print(events)
+        //print(events)
  
         let date = Date()
         let calendar = Calendar.current
@@ -152,14 +152,36 @@ class MergeView: UIViewController {
         let month = calendar.component(.month, from: date)
         let day = calendar.component(.day, from: date)
         let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from:date)
+        //let minutes = calendar.component(.minute, from:date)
        
+        let dateFormat = (month * 1000000) + (day * 10000) + year
         
-        print(year)
-        print(month)
-        print(day)
-        print(hour)
-        print(minutes)
+        var sorted = [Any]()
+        
+      /*  for i in 0 ..< events.count{
+        
+            let iEvent = events[i]
+            
+            
+            for j in 0 ..< sorted.count{
+                
+                let jEvent = sorted[j]
+                
+                if(jEvent)
+                
+                
+                
+                
+                
+            }
+            
+            if sorted.isEmpty{
+                sorted.append(events[i])
+            }
+ 
+        }
+        
+        */
     
     }
     
@@ -170,9 +192,9 @@ class MergeView: UIViewController {
         
         //updateMerged()
         
-        print(merged)
-        print("merged count is: ")
-        print(merged.count - 1)
+      //  print(merged)
+      //  print("merged count is: ")
+      //  print(merged.count - 1)
         
         if (sender.tag == 1){
             iterator = iterator + 1
@@ -207,6 +229,7 @@ class MergeView: UIViewController {
         //print(iterator)
         //updateEventsList()
         
+        sort()
         updateData()
         
 
