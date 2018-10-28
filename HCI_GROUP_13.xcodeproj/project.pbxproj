@@ -23,7 +23,6 @@
 		628021FA216FA49700CA1168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628021F8216FA49700CA1168 /* LaunchScreen.storyboard */; };
 		62802205216FA49700CA1168 /* HCI_GROUP_13Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62802204216FA49700CA1168 /* HCI_GROUP_13Tests.swift */; };
 		62802210216FA49700CA1168 /* HCI_GROUP_13UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6280220F216FA49700CA1168 /* HCI_GROUP_13UITests.swift */; };
-		628059502184F50000AB814B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6280594F2184F50000AB814B /* GoogleService-Info.plist */; };
 		62830E812179135E004FCF65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62830E802179135E004FCF65 /* AppDelegate.swift */; };
 		629CA6C1216FA722003DBA7B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CA6C0216FA722003DBA7B /* TaskManager.swift */; };
 		E70BDA8460290E8D80BD0351 /* Pods_HCI_GROUP_13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B4EC621848FFDB62B9FEC0 /* Pods_HCI_GROUP_13.framework */; };
@@ -64,13 +63,13 @@
 		628021F4216FA49000CA1168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		628021F6216FA49700CA1168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		628021F9216FA49700CA1168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		628021FB216FA49700CA1168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62802200216FA49700CA1168 /* HCI_GROUP_13Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HCI_GROUP_13Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62802204216FA49700CA1168 /* HCI_GROUP_13Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCI_GROUP_13Tests.swift; sourceTree = "<group>"; };
 		62802206216FA49700CA1168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6280220B216FA49700CA1168 /* HCI_GROUP_13UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HCI_GROUP_13UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6280220F216FA49700CA1168 /* HCI_GROUP_13UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCI_GROUP_13UITests.swift; sourceTree = "<group>"; };
 		62802211216FA49700CA1168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6280594F2184F50000AB814B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62830E802179135E004FCF65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629CA6C0216FA722003DBA7B /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		FE368118E8D5AA198BF3A6A0 /* Pods-HCI_GROUP_13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +136,6 @@
 		628021E1216FA49000CA1168 = {
 			isa = PBXGroup;
 			children = (
-				6280594F2184F50000AB814B /* GoogleService-Info.plist */,
 				628021EC216FA49000CA1168 /* HCI_GROUP_13 */,
 				62802203216FA49700CA1168 /* HCI_GROUP_13Tests */,
 				6280220E216FA49700CA1168 /* HCI_GROUP_13UITests */,
@@ -167,6 +165,7 @@
 				628021F3216FA49000CA1168 /* Main.storyboard */,
 				628021F6216FA49700CA1168 /* Assets.xcassets */,
 				628021F8216FA49700CA1168 /* LaunchScreen.storyboard */,
+				628021FB216FA49700CA1168 /* Info.plist */,
 				62830E802179135E004FCF65 /* AppDelegate.swift */,
 			);
 			path = HCI_GROUP_13;
@@ -324,7 +323,6 @@
 				03D5C9922180FA6400510FDF /* merge.xib in Resources */,
 				628021F5216FA49000CA1168 /* Main.storyboard in Resources */,
 				03D5C9952180FAB700510FDF /* merge.storyboard in Resources */,
-				628059502184F50000AB814B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

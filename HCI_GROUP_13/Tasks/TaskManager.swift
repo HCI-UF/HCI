@@ -1,8 +1,6 @@
 import UIKit
-import FirebaseDatabase
 
 var taskMgr: TaskManager = TaskManager()
-
 
 struct task{
     var name = "Un-Named"
@@ -14,14 +12,9 @@ struct task{
 
 class TaskManager: NSObject {
     
-    var ref: DatabaseReference?
-    
-    
     var tasks = [task]()
     
     func addTask(name: String, desc:String, loc: String, priority: Int, cat: String){
-        ref = Database.database().reference()
-        
         tasks.append(task(name: name, desc: desc, loc: loc, priority: priority, cat: cat))
     }
     
