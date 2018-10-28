@@ -1240,6 +1240,7 @@ void pb_release(const pb_field_t fields[], void *dest_struct)
 bool pb_decode_svarint(pb_istream_t *stream, pb_int64_t *dest)
 {
     pb_uint64_t value;
+
     if (!pb_decode_varint(stream, &value))
         return false;
     
@@ -1349,7 +1350,9 @@ static bool checkreturn pb_dec_uvarint(pb_istream_t *stream, const pb_field_t *f
 
 static bool checkreturn pb_dec_svarint(pb_istream_t *stream, const pb_field_t *field, void *dest)
 {
+
     pb_int64_t value, clamped;
+
     if (!pb_decode_svarint(stream, &value))
         return false;
     

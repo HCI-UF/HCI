@@ -158,6 +158,7 @@
   }
 
   // Save the session into memory.
+
   [[self class] setSessionInFetcherMap:self forSessionID:_sessionID];
 
   _request = [request copy];
@@ -201,6 +202,7 @@
 
   // Save the session into memory.
   [[self class] setSessionInFetcherMap:self forSessionID:_sessionID];
+
 
   _request = [request copy];
 
@@ -291,6 +293,7 @@
     // Explicitly remove the session so it won't be reused. The weak map table should
     // remove the session on deallocation, but dealloc may not happen immediately after
     // calling `finishTasksAndInvalidate`.
+
     [[self class] setSessionInFetcherMap:nil forSessionID:sessionID];
   }
 }
@@ -540,6 +543,7 @@
 
 /// Gets the fetcher with the session ID.
 + (instancetype)fetcherWithSessionIdentifier:(NSString *)sessionIdentifier {
+
   GULNetworkURLSession *session = [self sessionFromFetcherMapForSessionID:sessionIdentifier];
   if (!session && [sessionIdentifier hasPrefix:kGULNetworkBackgroundSessionConfigIDPrefix]) {
     session = [[GULNetworkURLSession alloc] initWithNetworkLoggerDelegate:nil];
@@ -553,6 +557,7 @@
 /// When reading and writing from/to the session map, don't use this method directly.
 /// To avoid thread safety issues, use one of the helper methods at the bottom of the
 /// file: setSessionInFetcherMap:forSessionID:, sessionFromFetcherMapForSessionID:
+
 + (NSMapTable<NSString *, GULNetworkURLSession *> *)sessionIDToFetcherMap {
   static NSMapTable *sessionIDToFetcherMap;
 
@@ -562,6 +567,7 @@
   });
   return sessionIDToFetcherMap;
 }
+
 
 + (NSLock *)sessionIDToFetcherMapReadWriteLock {
   static NSLock *lock;
@@ -676,20 +682,24 @@
   [[self sessionIDToFetcherMapReadWriteLock] lock];
   GULNetworkURLSession *existingSession =
       [[[self class] sessionIDToFetcherMap] objectForKey:sessionID];
+
   if (existingSession) {
     // Invalidating doesn't seem like the right thing to do here since it may cancel an active
     // background transfer if the background session is handling multiple requests. The old
     // session will be dropped from the map table, but still complete its request.
     NSString *message = [NSString stringWithFormat:@"Discarding session: %@", existingSession];
+
     [existingSession->_loggerDelegate GULNetwork_logWithLevel:kGULNetworkLogLevelInfo
                                                   messageCode:kGULNetworkMessageCodeURLSession019
                                                       message:message];
+
   }
   if (session) {
     [[[self class] sessionIDToFetcherMap] setObject:session forKey:sessionID];
   } else {
     [[[self class] sessionIDToFetcherMap] removeObjectForKey:sessionID];
   }
+
   [[self sessionIDToFetcherMapReadWriteLock] unlock];
 }
 

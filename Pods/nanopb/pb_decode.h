@@ -148,6 +148,7 @@ bool pb_decode_varint32(pb_istream_t *stream, uint32_t *dest);
 
 /* Decode an integer in the zig-zagged svarint format. This works for sint32
  * and sint64. */
+
 #ifndef PB_WITHOUT_64BIT
 bool pb_decode_svarint(pb_istream_t *stream, int64_t *dest);
 #else
