@@ -12,9 +12,6 @@
 		03D5C988217FE2B400510FDF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C987217FE2B400510FDF /* CustomCell.swift */; };
 		03D5C98A217FE2BD00510FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C989217FE2BD00510FDF /* ViewController.swift */; };
 		03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D5C98B217FE2FC00510FDF /* calendar.storyboard */; };
-		03D5C9922180FA6400510FDF /* merge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D5C9902180FA6400510FDF /* merge.xib */; };
-		03D5C9932180FA6400510FDF /* MergeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5C9912180FA6400510FDF /* MergeView.swift */; };
-		03D5C9952180FAB700510FDF /* merge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D5C9942180FAB700510FDF /* merge.storyboard */; };
 		622B80522178A2F0005FEF00 /* CellDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622B80512178A2F0005FEF00 /* CellDescViewController.swift */; };
 		628021F0216FA49000CA1168 /* TaskTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628021EF216FA49000CA1168 /* TaskTableController.swift */; };
 		628021F2216FA49000CA1168 /* AddTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628021F1216FA49000CA1168 /* AddTaskController.swift */; };
@@ -25,6 +22,9 @@
 		62802210216FA49700CA1168 /* HCI_GROUP_13UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6280220F216FA49700CA1168 /* HCI_GROUP_13UITests.swift */; };
 		62830E812179135E004FCF65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62830E802179135E004FCF65 /* AppDelegate.swift */; };
 		629CA6C1216FA722003DBA7B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CA6C0216FA722003DBA7B /* TaskManager.swift */; };
+		D6441140218657ED006C11C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D644113F218657ED006C11C5 /* GoogleService-Info.plist */; };
+		D644114221865855006C11C5 /* merge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D644114121865855006C11C5 /* merge.storyboard */; };
+		D644114421865865006C11C5 /* MergeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644114321865865006C11C5 /* MergeView.swift */; };
 		E70BDA8460290E8D80BD0351 /* Pods_HCI_GROUP_13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B4EC621848FFDB62B9FEC0 /* Pods_HCI_GROUP_13.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,9 +51,6 @@
 		03D5C987217FE2B400510FDF /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		03D5C989217FE2BD00510FDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03D5C98B217FE2FC00510FDF /* calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = calendar.storyboard; sourceTree = "<group>"; };
-		03D5C9902180FA6400510FDF /* merge.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = merge.xib; sourceTree = "<group>"; };
-		03D5C9912180FA6400510FDF /* MergeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeView.swift; sourceTree = "<group>"; };
-		03D5C9942180FAB700510FDF /* merge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = merge.storyboard; sourceTree = "<group>"; };
 		292B1AC9A687C4701219B69F /* Pods-HCI_GROUP_13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.debug.xcconfig"; sourceTree = "<group>"; };
 		54B4EC621848FFDB62B9FEC0 /* Pods_HCI_GROUP_13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HCI_GROUP_13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		622B80512178A2F0005FEF00 /* CellDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDescViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +69,9 @@
 		62802211216FA49700CA1168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62830E802179135E004FCF65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629CA6C0216FA722003DBA7B /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		D644113F218657ED006C11C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D644114121865855006C11C5 /* merge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = merge.storyboard; sourceTree = "<group>"; };
+		D644114321865865006C11C5 /* MergeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeView.swift; sourceTree = "<group>"; };
 		FE368118E8D5AA198BF3A6A0 /* Pods-HCI_GROUP_13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCI_GROUP_13.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,9 +126,8 @@
 		03D5C98F2180F9C600510FDF /* Merge */ = {
 			isa = PBXGroup;
 			children = (
-				03D5C9902180FA6400510FDF /* merge.xib */,
-				03D5C9912180FA6400510FDF /* MergeView.swift */,
-				03D5C9942180FAB700510FDF /* merge.storyboard */,
+				D644114121865855006C11C5 /* merge.storyboard */,
+				D644114321865865006C11C5 /* MergeView.swift */,
 			);
 			path = Merge;
 			sourceTree = "<group>";
@@ -136,6 +135,7 @@
 		628021E1216FA49000CA1168 = {
 			isa = PBXGroup;
 			children = (
+				D644113F218657ED006C11C5 /* GoogleService-Info.plist */,
 				628021EC216FA49000CA1168 /* HCI_GROUP_13 */,
 				62802203216FA49700CA1168 /* HCI_GROUP_13Tests */,
 				6280220E216FA49700CA1168 /* HCI_GROUP_13UITests */,
@@ -317,12 +317,12 @@
 			files = (
 				03BA7B612184D96600AF5F3E /* right-arrow.png in Resources */,
 				03BA7B632184FD9800AF5F3E /* GoogleService-Info.plist in Resources */,
+				D6441140218657ED006C11C5 /* GoogleService-Info.plist in Resources */,
 				628021FA216FA49700CA1168 /* LaunchScreen.storyboard in Resources */,
 				628021F7216FA49700CA1168 /* Assets.xcassets in Resources */,
 				03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */,
-				03D5C9922180FA6400510FDF /* merge.xib in Resources */,
 				628021F5216FA49000CA1168 /* Main.storyboard in Resources */,
-				03D5C9952180FAB700510FDF /* merge.storyboard in Resources */,
+				D644114221865855006C11C5 /* merge.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +351,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-
-				"${SRCROOT}/../../GitHub/HCI/Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13-frameworks.sh",
-
+				"${SRCROOT}/Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -370,7 +368,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../../GitHub/HCI/Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HCI_GROUP_13/Pods-HCI_GROUP_13-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE9C0CA3072B26EF5E936DF4 /* [CP] Check Pods Manifest.lock */ = {
@@ -407,7 +405,7 @@
 				628021F0216FA49000CA1168 /* TaskTableController.swift in Sources */,
 				62830E812179135E004FCF65 /* AppDelegate.swift in Sources */,
 				03D5C98A217FE2BD00510FDF /* ViewController.swift in Sources */,
-				03D5C9932180FA6400510FDF /* MergeView.swift in Sources */,
+				D644114421865865006C11C5 /* MergeView.swift in Sources */,
 				03D5C988217FE2B400510FDF /* CustomCell.swift in Sources */,
 				622B80522178A2F0005FEF00 /* CellDescViewController.swift in Sources */,
 			);

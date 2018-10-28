@@ -17,10 +17,10 @@
             </objects>
             <point key="canvasLocation" x="126" y="-960"/>
         </scene>
-        <!--Merge-->
+        <!--merge-->
         <scene sceneID="ggZ-2A-j7E">
             <objects>
-                <viewControllerPlaceholder storyboardName="merge" referencedIdentifier="Merge" id="eEi-zh-UAd" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="merge" referencedIdentifier="merge" id="eEi-zh-UAd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEK-mJ-BrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1239" y="-941"/>
@@ -338,6 +338,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r1X-qG-nDD"/>
+        <segue reference="5d4-64-nZk"/>
     </inferredMetricsTieBreakers>
 </document>
