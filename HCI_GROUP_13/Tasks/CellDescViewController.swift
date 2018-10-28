@@ -51,8 +51,8 @@ class CellDescViewController: UIViewController {
         
         taskMgr.updateTask(name: Name.text!, desc: Desc.text!, loc: Loc.text!, priority: priorNum, cat: category!, index: index)
         
-        //sends user back to task view
-        self.tabBarController?.selectedIndex = 0;
+        
+        
     }
     
     
