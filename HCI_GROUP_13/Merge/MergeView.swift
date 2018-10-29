@@ -43,7 +43,7 @@ class MergeView: UIViewController {
         var name: String
         var description: String
         var category: String
-        var priority: String
+        var priority: integer_t
         var remind: String
         
     }
@@ -72,6 +72,12 @@ class MergeView: UIViewController {
     
     func updateView(){
         
+        
+        sort()
+        
+        
+        
+        
         let currStruct = merged[iterator]
         
         if currStruct is task{
@@ -81,25 +87,62 @@ class MergeView: UIViewController {
             
             let currTask = currStruct as! task
             
+            
             taskName.text = currTask.name
             taskDesc.text = "Description: " + currTask.description
             taskCat.text = "Category: " + currTask.category
-            taskPrio.text = "Priority: " + currTask.priority
+            
+            if(currTask.priority == 1){
+                taskPrio.text = "Priority: Low"
+
+            }
+            else if(currTask.priority == 2){
+                taskPrio.text = "Priority: Medium"
+
+            }
+            else if(currTask.priority == 3){
+                taskPrio.text = "Priority: High"           }
+            
+            
             taskRem.text = "Remind: " + currTask.remind
             
         }
         
         if currStruct is event{
             
+           
+            
             showTask.isHidden = true
             showEvent.isHidden = false
             
             let currEvent = currStruct as! event
             
+            
+            print("Allday, start time and end time is: ")
+            print(currEvent.name)
+            print(currEvent.allDay)
+            print(currEvent.timeStart)
+            print(currEvent.timeEnd)
+            
             eventName.text = currEvent.name
-            eventDate.text = "Date: " + String(currEvent.date)
-            eventTimeStart.text = "Time Start: " + String(currEvent.timeStart)
-            eventTimeEnd.text = "Time End: " + String(currEvent.timeEnd)
+            
+            let year = currEvent.date / 10000
+            let month = (currEvent.date - year * 10000) / 100
+            let day = ((currEvent.date - year * 10000) - month * 100)
+            
+            eventDate.text = "Date: " + String(month) + "/" + String(day) + "/" + String(year)
+            
+            if(currEvent.allDay){
+                print(String(Int(currEvent.timeStart)))
+                eventTimeStart.text = "Time Start: " + String(Int(currEvent.timeStart))
+                eventTimeEnd.text = "Time End: " + String(Int(currEvent.timeEnd))
+            }
+            else{
+                eventTimeStart.text = "All Day"
+                eventTimeEnd.text = ""
+            }
+            
+            
             eventLoc.text = "Location: " + currEvent.location
             eventCat.text = "Category: " + currEvent.category
             eventPrio.text = "Priority: " + currEvent.priority
@@ -117,7 +160,7 @@ class MergeView: UIViewController {
         taskName.text = currStruct.name
         taskDesc.text = "Description: " + currStruct.description
         taskCat.text = "Category: " + currStruct.category
-        taskPrio.text = "Priority: " + currStruct.priority
+        //taskPrio.text = "Priority: " + currStruct.priority
         taskRem.text = "Remind: " + currStruct.remind
         
         
@@ -128,7 +171,7 @@ class MergeView: UIViewController {
         print(events)
         print(tasks)*/
         
-        sort()
+        //sort()
         
         let currStruct = events[iterator]
         eventName.text = currStruct.name
@@ -156,27 +199,30 @@ class MergeView: UIViewController {
        
         let dateFormat = (year * 10000) + (month * 100) + day
         
-        let dateAndTime = (dateFormat * 100 + hour)
+        //let dateAndTime = (dateFormat * 100 + hour)
         
         var sorted = [Any]()
         
         sorted = events.sorted { (($0.date * 100) + $0.timeStart) < (($1.date * 100) + $1.timeStart) }
         
+        var sortedTasks = [Any]()
+        
+        sortedTasks = tasks.sorted { ($0.priority > $1.priority) }
         
         print(sorted)
         
         for i in 0 ..< tasks.count{
             
-            let iTask = tasks[i]
+            let iTask = sortedTasks[i] as! task
             var dateTemp = Int(dateFormat)
             
-            if(iTask.priority == "low"){
+            if(iTask.priority == 1){ //low
                 dateTemp = dateTemp + 3
             }
-            else if(iTask.priority == "medium"){
+            else if(iTask.priority == 2){  //medium
                 dateTemp = dateTemp + 1
             }
-            else{
+            else{ //high
                 //do nothing
             }
             
@@ -231,7 +277,6 @@ class MergeView: UIViewController {
       //  print("merged count is: ")
       //  print(merged.count - 1)
         
-        sort()
         
         if (sender.tag == 1){
             iterator = iterator + 1
@@ -277,7 +322,7 @@ class MergeView: UIViewController {
         
         self.tasks.removeAll()
         
-        var currTask = task(name: "", description: "", category: "", priority: "", remind: "")
+        var currTask = task(name: "", description: "", category: "", priority: 0, remind: "")
         
         ref = Database.database().reference()
         
@@ -308,7 +353,7 @@ class MergeView: UIViewController {
                             currTask.category = rest2.value as! String
                         }
                         else if (taskKey == "Priority"){
-                            //currTask.priority = rest2.value as! String
+                            currTask.priority = rest2.value as! integer_t
                         }
                         else if (taskKey == "Remind"){
                             currTask.remind = rest2.value as! String
@@ -430,6 +475,9 @@ class MergeView: UIViewController {
         nextButton.tag = 1
         
         updateData()
+        //updateView()
+        
+        //scheduledTimerWithTimeInterval()
         
         super.viewDidLoad()
 
@@ -442,6 +490,26 @@ class MergeView: UIViewController {
         rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(rightSwipe)
     }
+    
+  /*  var timer = Timer()
+   
+    
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
+
+        var refreshTimer: Timer!
+
+        refreshTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
+
+    }
+    
+   @objc func runTimedCode(){
+        updateData()
+        updateView()
+        
+    }
+    */
+    
     
 
 }
