@@ -9,21 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--calendar-->
-        <scene sceneID="0mG-7W-zFj">
-            <objects>
-                <viewControllerPlaceholder storyboardName="calendar" referencedIdentifier="calendar" id="5FK-H6-lYk" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rQ5-lf-pGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="126" y="-960"/>
-        </scene>
-        <!--Merge-->
+        <!--merge-->
         <scene sceneID="ggZ-2A-j7E">
             <objects>
-                <viewControllerPlaceholder storyboardName="merge" referencedIdentifier="Merge" id="eEi-zh-UAd" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="merge" id="eEi-zh-UAd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEK-mJ-BrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="-941"/>
+            <point key="canvasLocation" x="-92" y="-533"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="hNz-n2-bh7">
@@ -42,41 +34,16 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="glR-mf-0zf"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcV-qY-2wZ">
-                                <rect key="frame" x="0.0" y="74" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sort Name"/>
-                                <connections>
-                                    <action selector="sortNameButtonTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="f1a-14-bJS"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7R2-sP-7hk">
                                 <rect key="frame" x="0.0" y="30" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Tasks" id="ka4-iz-dLk">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Kon-fo-Ioz">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g0K-VY-D9M">
-                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Calendar"/>
-                                                <connections>
-                                                    <segue destination="5FK-H6-lYk" kind="show" id="2lw-vf-14M"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Merge" id="IWm-5k-WX6">
-                                            <connections>
-                                                <segue destination="eEi-zh-UAd" kind="show" id="Uqn-tJ-GFd"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5G-d8-hWz">
-                                <rect key="frame" x="237" y="74" width="47" height="30"/>
+                                <rect key="frame" x="219" y="74" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sort !!!"/>
+                                <state key="normal" title="Sort Priority">
+                                    <color key="titleColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="sortPriorityButtonTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="o9H-xE-hTO"/>
                                 </connections>
@@ -84,9 +51,28 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13I-Om-VGJ">
                                 <rect key="frame" x="156" y="626" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Task"/>
+                                <state key="normal" title="Add Task">
+                                    <color key="titleColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="8rJ-Kc-sve" kind="show" id="Mz6-hd-zGc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tasks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBt-KX-mEj">
+                                <rect key="frame" x="16" y="30" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcV-qY-2wZ">
+                                <rect key="frame" x="16" y="74" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sort Name">
+                                    <color key="titleColor" red="0.8256152849740932" green="0.65305493365228517" blue="0.24691845054174932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sortNameButtonTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="f1a-14-bJS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,6 +84,7 @@
                         <outlet property="sort" destination="K5G-d8-hWz" id="ude-UQ-UUp"/>
                         <outlet property="tblTasks" destination="1Oz-b1-H9n" id="obm-xR-aU1"/>
                         <segue destination="LjK-kb-AAX" kind="presentation" identifier="ListToDetails" id="zwx-3O-2MW"/>
+                        <segue destination="eEi-zh-UAd" kind="showDetail" identifier="goLeft" id="iNJ-uY-1hn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -115,7 +102,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNC-nw-oZd">
                                 <rect key="frame" x="22" y="20" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="9pv-A4-QxB" kind="show" id="r1X-qG-nDD"/>
                                 </connections>
@@ -163,6 +152,7 @@
                                     <segment title="Medium"/>
                                     <segment title="High"/>
                                 </segments>
+                                <color key="tintColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ECk-vA-3oO">
                                 <rect key="frame" x="90" y="338" width="220" height="29"/>
@@ -172,6 +162,7 @@
                                     <segment title="School"/>
                                     <segment title="Socail"/>
                                 </segments>
+                                <color key="tintColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ei-qP-PGt">
                                 <rect key="frame" x="11" y="306" width="55" height="21"/>
@@ -190,6 +181,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkq-6C-ArT">
                                 <rect key="frame" x="272" y="383" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="buttonUpdate_ClickWithSender:" destination="LjK-kb-AAX" eventType="touchUpInside" id="Z7B-FR-GDC"/>
@@ -264,6 +256,7 @@
                                     <segment title="Medium"/>
                                     <segment title="High"/>
                                 </segments>
+                                <color key="tintColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRL-Sk-hRc">
                                 <rect key="frame" x="16" y="179" width="343" height="30"/>
@@ -285,6 +278,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muz-Zb-2hi">
                                 <rect key="frame" x="329" y="293" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="buttonAddTask_ClickWithSender:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Ibp-h1-aJF"/>
@@ -299,6 +293,7 @@
                                     <segment title="School"/>
                                     <segment title="Social"/>
                                 </segments>
+                                <color key="tintColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1G5-c8-Cgt">
                                 <rect key="frame" x="16" y="257" width="71" height="21"/>
@@ -310,6 +305,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKi-ka-PKW">
                                 <rect key="frame" x="15" y="20" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="9pv-A4-QxB" kind="show" id="4ER-7y-mJQ"/>
@@ -338,6 +334,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r1X-qG-nDD"/>
+        <segue reference="4ER-7y-mJQ"/>
     </inferredMetricsTieBreakers>
 </document>

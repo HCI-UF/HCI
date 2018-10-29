@@ -12,7 +12,7 @@
         <!--Ib Calendar Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="calendar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="HCI_GROUP_13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calendar" title="calendar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="HCI_GROUP_13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,10 +159,11 @@
                                     <constraint firstAttribute="height" constant="40" id="BWa-Sv-jXp"/>
                                     <constraint firstAttribute="width" constant="40" id="gFx-qo-JKF"/>
                                 </constraints>
-                                <state key="normal" image="right-arrow.png"/>
-                                <connections>
-                                    <segue destination="dRB-Ep-IJn" kind="show" id="4dL-tn-xFo"/>
-                                </connections>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.16078431372549018" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,23 +179,22 @@
                     <connections>
                         <outlet property="calendarView" destination="hLr-Ts-gGt" id="IMs-CT-znw"/>
                         <outlet property="month" destination="3hw-aq-hf1" id="Lpx-X8-19R"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="XVq-7b-QUm"/>
                         <outlet property="year" destination="kq3-u8-FNh" id="QHn-Rh-Vch"/>
+                        <segue destination="dRB-Ep-IJn" kind="show" identifier="goRight" animates="NO" id="3Nq-Zt-fH7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
-        <!--TaskList-->
+        <!--merge-->
         <scene sceneID="77i-H1-wee">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TaskList" id="dRB-Ep-IJn" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="merge" id="dRB-Ep-IJn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUm-Vz-z5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="-117"/>
+            <point key="canvasLocation" x="804" y="133"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="right-arrow.png" width="64" height="64"/>
-    </resources>
 </document>

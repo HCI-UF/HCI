@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d50-Lo-09E">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,20 +9,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--merge-->
         <scene sceneID="yGh-Tw-LWu">
             <objects>
-                <viewController storyboardIdentifier="Merge" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d50-Lo-09E" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Merge" title="merge" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d50-Lo-09E" customClass="MergeView" customModule="HCI_GROUP_13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uzP-2F-Op2" customClass="MergeView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DZP-xb-uEm"/>
                     </view>
+                    <connections>
+                        <segue destination="Da4-c3-ch9" kind="showDetail" identifier="goLeft" animates="NO" id="0Ne-Fd-1ih"/>
+                        <segue destination="tf3-1M-1P5" kind="showDetail" identifier="goRight" animates="NO" id="2Zd-54-JEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fS3-29-IWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="61"/>
+            <point key="canvasLocation" x="10" y="-67"/>
+        </scene>
+        <!--TaskList-->
+        <scene sceneID="0so-FE-Tyt">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TaskList" storyboardName="Main" referencedIdentifier="TaskList" id="tf3-1M-1P5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JvX-Ek-8du" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="-67"/>
+        </scene>
+        <!--calendar-->
+        <scene sceneID="NNh-mI-DmE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="calendar" referencedIdentifier="calendar" id="Da4-c3-ch9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b88-3C-RG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623" y="-2"/>
         </scene>
     </scenes>
 </document>
