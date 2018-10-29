@@ -1,4 +1,3 @@
-
 # 2018-10-25 -- v3.3.0
 - Fixed a crash caused by keychain operation when accessing default access group. (#1399, #1393)
 - Remove internal APIs that are no longer used.
