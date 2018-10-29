@@ -48,7 +48,7 @@ class AddEventController: UIViewController {
         timePicker_end = UIDatePicker()
         timePicker_end?.datePickerMode = .time
         timePicker_end?.addTarget(self, action: #selector(timeChanged(sender:)), for: .valueChanged)
-        startTime.inputView = timePicker_end
+        endTime.inputView = timePicker_end
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddEventController.viewTapped(gestureRecognizer:)))
         
@@ -72,11 +72,11 @@ class AddEventController: UIViewController {
     
     @objc func timeChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm a"
-        if (sender == datePicker) {
+        dateFormatter.dateFormat = "HH:mm"
+        if (sender == timePicker) {
             startTime.text = dateFormatter.string(from: sender.date)
         }
-        else if (sender == datePicker_end) {
+        else if (sender == timePicker_end) {
             endTime.text = dateFormatter.string(from: sender.date)
         }
         //view.endEditing(true)
