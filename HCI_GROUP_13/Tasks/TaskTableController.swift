@@ -127,7 +127,7 @@ class taskTableController: UIViewController, UITableViewDelegate, UITableViewDat
 extension UIViewController {
     
     /**
-     credit: 
+     credit: github.com/anelad
      Checks whether controller can perform specific segue or not.
      - parameter identifier: Identifier of UIStoryboardSegue.
      */

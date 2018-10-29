@@ -308,7 +308,7 @@ class MergeView: UIViewController {
                             currTask.category = rest2.value as! String
                         }
                         else if (taskKey == "Priority"){
-                            currTask.priority = rest2.value as! String
+                            //currTask.priority = rest2.value as! String
                         }
                         else if (taskKey == "Remind"){
                             currTask.remind = rest2.value as! String
@@ -438,6 +438,9 @@ class MergeView: UIViewController {
         leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(leftSwipe)
         
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
+        self.view.addGestureRecognizer(rightSwipe)
     }
     
 
