@@ -8,11 +8,19 @@
 
 import UIKit
 import JTAppleCalendar
+import FirebaseDatabase
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
+    @IBOutlet weak var myTableView: UITableView!
+    
+    var myList:[String]=[]
+    
+//    var handle:DatabaseHandle?
+    var ref:DatabaseReference?
     
     let outsideMonthColor = #colorLiteral(red: 0.3450980392, green: 0.2901960784, blue: 0.4, alpha: 1)
     let monthColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -26,11 +34,42 @@ class ViewController: UIViewController {
         
         setupCalendarView()
         
+        ref = Database.database().reference()
+        
+        ref?.child("CalendarView").observe(DataEventType.value, with: {(snapshot) in
+            
+            if snapshot.childrenCount > 0 {
+                for CalendarView in snapshot.children.allObjects as! [DataSnapshot]{
+                    let calendarObject = CalendarView.value as? [String: AnyObject]
+                    let name = calendarObject?["name"]
+                    
+                    self.myList.append(name as! String)
+                    self.myTableView.reloadData()
+                }
+            }
+//            if let item = snapshot.value as? String{
+//                self.myList.append(item)
+//                self.myTableView.reloadData()
+//            }
+        })
+        
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         rightSwipe.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(rightSwipe)
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    //set up previews
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier:"table")
+        cell.textLabel?.text = myList[indexPath.row]
+        return cell
+    }
+    // finished setting up previews
     
     func setupCalendarView(){
         // setup calendar spacing
