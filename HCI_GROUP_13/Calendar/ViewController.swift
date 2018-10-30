@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         
         setupCalendarView()
         
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        rightSwipe.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(rightSwipe)
         // Do any additional setup after loading the view, typically from a nib.
     }
     

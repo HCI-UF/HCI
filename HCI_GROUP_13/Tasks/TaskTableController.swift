@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  TaskTableController
 //  HCI_GROUP_13
 //
 //  Created by John Mooney on 10/11/18.
@@ -18,7 +18,9 @@ class taskTableController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
+        self.view.addGestureRecognizer(rightSwipe)
     }
     
     //list update
@@ -38,13 +40,13 @@ class taskTableController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.textLabel?.text = taskMgr.tasks[indexPath.row].name
         cell.detailTextLabel?.text = taskMgr.tasks[indexPath.row].desc
         if taskMgr.tasks[indexPath.row].cat == "Home" {
-            cell.backgroundColor = UIColor.orange
+            cell.backgroundColor = #colorLiteral(red: 0.6677343766, green: 0.5182923333, blue: 0.7998097474, alpha: 1)
         }
         else if taskMgr.tasks[indexPath.row].cat == "School" {
-            cell.backgroundColor = UIColor.yellow
+            cell.backgroundColor = #colorLiteral(red: 0.9843353629, green: 0.7787988186, blue: 0.293281436, alpha: 1)
         }
         else {
-            cell.backgroundColor = UIColor.green
+            cell.backgroundColor = #colorLiteral(red: 0.6701748705, green: 0.6051608223, blue: 0.525135491, alpha: 1)
         }
         
         
@@ -54,7 +56,7 @@ class taskTableController: UIViewController, UITableViewDelegate, UITableViewDat
         button.frame = CGRect(origin: CGPoint(x: 50, y: 60), size: CGSize(width: 70, height: 24))
         let cellHeight: CGFloat = 44.0
         button.center = CGPoint(x: view.bounds.width - 50, y: cellHeight / 2.0)
-        button.backgroundColor = UIColor.blue
+        button.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         button.addTarget(self, action: #selector(buttonClicked), for: UIControl.Event.touchUpInside)
         button.setTitle("Details", for: UIControl.State.normal)
         button.tag = indexPath.row
@@ -122,3 +124,46 @@ class taskTableController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 }
 
+extension UIViewController {
+    
+    /**
+     credit: github.com/anelad
+     Checks whether controller can perform specific segue or not.
+     - parameter identifier: Identifier of UIStoryboardSegue.
+     */
+    func canPerformSegue(withIdentifier identifier: String) -> Bool {
+        //first fetch segue templates set in storyboard.
+        guard let identifiers = value(forKey: "storyboardSegueTemplates") as? [NSObject] else {
+            //if cannot fetch, return false
+            return false
+        }
+        //check every object in segue templates, if it has a value for key _identifier equals your identifier.
+        let canPerform = identifiers.contains { (object) -> Bool in
+            if let id = object.value(forKey: "_identifier") as? String {
+                if id == identifier{
+                    return true
+                } else {
+                    return false
+                }
+            } else {
+                return false
+            }
+        }
+        return canPerform
+    }
+    @objc func swipeAction(swipe:UISwipeGestureRecognizer) {
+        switch swipe.direction.rawValue {
+        case 1:
+            if (self.canPerformSegue(withIdentifier: "goLeft")) {
+                performSegue(withIdentifier: "goLeft", sender: self)
+            }
+        case 2:
+            if (self.canPerformSegue(withIdentifier: "goRight")) {
+                performSegue(withIdentifier: "goRight", sender: self)
+            }
+        default:
+            break;
+        }
+    }
+
+}

@@ -24,6 +24,9 @@
 		629CA6C1216FA722003DBA7B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CA6C0216FA722003DBA7B /* TaskManager.swift */; };
 		D6D32FDF2186AB33007A6DF6 /* merge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D32FDD2186AB32007A6DF6 /* merge.storyboard */; };
 		D6D32FE02186AB33007A6DF6 /* MergeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D32FDE2186AB33007A6DF6 /* MergeView.swift */; };
+		FA37A7CB2186B12600753794 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA37A7CA2186B12600753794 /* GoogleService-Info.plist */; };
+		FA37A7CD2186B2D600753794 /* customSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A7CC2186B2D600753794 /* customSegue.swift */; };
+		FA37A7D12186C1A500753794 /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A7D02186C1A500753794 /* AddEventController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
 		03BA7B602184D96600AF5F3E /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow.png"; sourceTree = "<group>"; };
 		03D5C987217FE2B400510FDF /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		03D5C989217FE2BD00510FDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,9 @@
 		A41020155692C11C228DF215 /* Pods_HCI_GROUP_13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HCI_GROUP_13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D32FDD2186AB32007A6DF6 /* merge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = merge.storyboard; sourceTree = "<group>"; };
 		D6D32FDE2186AB33007A6DF6 /* MergeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeView.swift; sourceTree = "<group>"; };
+		FA37A7CA2186B12600753794 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA37A7CC2186B2D600753794 /* customSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegue.swift; sourceTree = "<group>"; };
+		FA37A7D02186C1A500753794 /* AddEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +115,10 @@
 		03D5C98D2180F7E100510FDF /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				03BA7B602184D96600AF5F3E /* right-arrow.png */,
 				03D5C98B217FE2FC00510FDF /* calendar.storyboard */,
 				03D5C987217FE2B400510FDF /* CustomCell.swift */,
 				03D5C989217FE2BD00510FDF /* ViewController.swift */,
+				FA37A7D02186C1A500753794 /* AddEventController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -167,8 +174,10 @@
 				628021F3216FA49000CA1168 /* Main.storyboard */,
 				628021F6216FA49700CA1168 /* Assets.xcassets */,
 				628021F8216FA49700CA1168 /* LaunchScreen.storyboard */,
+				FA37A7CA2186B12600753794 /* GoogleService-Info.plist */,
 				628021FB216FA49700CA1168 /* Info.plist */,
 				62830E802179135E004FCF65 /* AppDelegate.swift */,
+				FA37A7CC2186B2D600753794 /* customSegue.swift */,
 			);
 			path = HCI_GROUP_13;
 			sourceTree = "<group>";
@@ -315,6 +324,7 @@
 				628021F7216FA49700CA1168 /* Assets.xcassets in Resources */,
 				03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */,
 				628021F5216FA49000CA1168 /* Main.storyboard in Resources */,
+				FA37A7CB2186B12600753794 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,9 +404,11 @@
 			files = (
 				628021F2216FA49000CA1168 /* AddTaskController.swift in Sources */,
 				629CA6C1216FA722003DBA7B /* TaskManager.swift in Sources */,
+				FA37A7D12186C1A500753794 /* AddEventController.swift in Sources */,
 				628021F0216FA49000CA1168 /* TaskTableController.swift in Sources */,
 				62830E812179135E004FCF65 /* AppDelegate.swift in Sources */,
 				03D5C98A217FE2BD00510FDF /* ViewController.swift in Sources */,
+				FA37A7CD2186B2D600753794 /* customSegue.swift in Sources */,
 				D6D32FE02186AB33007A6DF6 /* MergeView.swift in Sources */,
 				03D5C988217FE2B400510FDF /* CustomCell.swift in Sources */,
 				622B80522178A2F0005FEF00 /* CellDescViewController.swift in Sources */,
