@@ -27,7 +27,11 @@ class MergeView: UIViewController {
     @IBOutlet  var eventPrio: UILabel!
     @IBOutlet  var eventNoti: UILabel!
     
+    @IBOutlet weak var priorityLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     
+    @IBOutlet weak var sortCategoryButton: UIToolbar!
+    @IBOutlet weak var sortPriorityButton: UIToolbar!
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var showTask: UIView!
@@ -45,7 +49,6 @@ class MergeView: UIViewController {
         var category: String
         var priority: integer_t
         var remind: String
-        
     }
     
     struct event{
@@ -68,13 +71,53 @@ class MergeView: UIViewController {
     var merged = [Any]()
     
     var iterator = 0
+    var priorityLevel = "All"
+    var categoryLevel = "All"
     
     
     func updateView(){
         
-        
         sort()
+        filterPriority()
+        filterCategory()
         
+        
+        if(priorityLevel == "All"){
+            priorityLabel.isHidden = true
+        }
+        else{
+            priorityLabel.isHidden = false
+            priorityLabel.text = priorityLevel
+        }
+        if(categoryLevel == "All"){
+            categoryLabel.isHidden = true
+        }
+        else{
+            categoryLabel.isHidden = false
+            categoryLabel.text = categoryLevel
+        }
+        
+        
+        if(iterator > merged.count - 1){
+            iterator = merged.count - 1
+        }
+        if merged.count == 0 {
+            iterator = 0
+            showTask.isHidden = true
+            showEvent.isHidden = true
+            prevButton.isHidden = true
+            nextButton.isHidden = true
+            return
+        }
+        else if merged.count == 1{
+            iterator = 0
+            prevButton.isHidden = true
+            nextButton.isHidden = true
+        }
+        else if merged.count >= 2 {
+            nextButton.isHidden = false
+            
+        }
         
         
         
@@ -209,7 +252,7 @@ class MergeView: UIViewController {
         
         sortedTasks = tasks.sorted { ($0.priority > $1.priority) }
         
-        print(sorted)
+        //print(sorted)
         
         for i in 0 ..< tasks.count{
             
@@ -256,7 +299,7 @@ class MergeView: UIViewController {
         
 
         
-        print(sorted)
+        //print(sorted)
         
         merged = sorted
         
@@ -465,6 +508,175 @@ class MergeView: UIViewController {
         //print(self.events)
         
     }
+    
+    func filterPriority(){
+        
+        if(priorityLevel == "All"){
+            return //Don't filter
+        }
+        
+        if(merged.count == 0){
+            return
+        }
+        
+        var filtered = [Any]()
+        
+        
+        print("Merged is: ")
+        print(merged)
+        print("Merged count is: ")
+        print(merged.count)
+        
+        for i in 0 ..< merged.count{
+        
+            var tempPriority = ""
+        
+            if merged[i] is task{
+                
+                let currTask = merged[i] as! task
+                
+                if(currTask.priority == 1){
+                    
+                    tempPriority = "Low"
+                }
+                else if(currTask.priority == 2){
+                    tempPriority = "Medium"
+                }
+                else{
+                    tempPriority = "High"
+                }
+            }
+            else{
+                let currEvent = merged[i] as! event
+                
+                tempPriority = currEvent.priority
+            }
+        
+            if(tempPriority == priorityLevel){
+                print("tempPriority is: ")
+                print(tempPriority)
+                print("priorityLevel is: ")
+                print(priorityLevel)
+                filtered.append(merged[i])
+            }
+            
+        }
+  
+        print("filtered is: ")
+        print(filtered)
+        print("filtered count is: ")
+        print(filtered.count)
+        
+        merged = filtered
+        
+    }
+    
+    func filterCategory(){
+        
+        if(categoryLevel == "All"){
+            return //Don't filter
+        }
+        if(merged.count == 0){
+            return
+        }
+        
+        var filtered = [Any]()
+        
+        for i in 0 ..< merged.count{
+            
+            var tempCategory = ""
+            
+            if merged[i] is task{
+                
+                let currTask = merged[i] as! task
+               
+                tempCategory = currTask.category
+               
+            }
+            else{
+                let currEvent = merged[i] as! event
+                
+                tempCategory = currEvent.category
+            }
+            
+            if(tempCategory == categoryLevel){
+                filtered.append(merged[i])
+            }
+            
+        }
+        
+        merged = filtered
+        
+    }
+    
+    
+    @IBAction func changePriorityLevel(_ sender: Any) {
+        //categoryLevel = "All"
+        iterator = 0
+        prevButton.isHidden = true
+        nextButton.isHidden = false
+        print(priorityLevel)
+        if(priorityLevel == "All"){
+            priorityLevel = "High"
+            updateView()
+            updateData()
+            return
+        }
+        else if(priorityLevel == "High"){
+            priorityLevel = "Medium"
+            updateView()
+            updateData()
+            return
+        }
+        else if(priorityLevel == "Medium"){
+            priorityLevel = "Low"
+            updateView()
+            updateData()
+            return
+        }
+        else{
+            priorityLevel = "All"
+            updateView()
+            updateData()
+            return
+        }
+        
+    }
+    
+    @IBAction func changeCategoryLevel(_ sender: Any) {
+        iterator = 0
+        //priorityLevel = "All"
+        print(categoryLevel)
+        if(categoryLevel == "All"){
+            categoryLevel = "Home"
+            updateView()
+            return
+        }
+        else if(categoryLevel == "Home"){
+            categoryLevel = "Social"
+            updateView()
+            return
+        }
+        else if(categoryLevel == "Social"){
+            categoryLevel = "School"
+            updateView()
+            return
+        }
+        else{
+            categoryLevel = "All"
+            updateView()
+            return
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     
     
     override func viewDidLoad() {
