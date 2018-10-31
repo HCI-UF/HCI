@@ -17,7 +17,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     
-    var myList:[String]=[]
     
 //    var handle:DatabaseHandle?
     var ref:DatabaseReference?
@@ -42,8 +41,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 for CalendarView in snapshot.children.allObjects as! [DataSnapshot]{
                     let calendarObject = CalendarView.value as? [String: AnyObject]
                     let name = calendarObject?["name"]
+                    let allDay = calendarObject?["allDay"]
+                    let category = calendarObject?["category"]
+                    let date = calendarObject?["date"]
+                    let description = calendarObject?["description"]
+                    let location = calendarObject?["location"]
+                    let priority = calendarObject?["priority"]
+                    let timeEnd = calendarObject?["timeEnd"]
+                    let timeStart = calendarObject?["timeStart"]
                     
-                    self.myList.append(name as! String)
+                    eventMgr.events.append(event(allDay: (allDay != nil), category: (category as! String), date: (date as! Int), description: (description as! String), name: (name as! String), location: (location as! String), priority: (priority as! String), timeEnd: (timeEnd as! Int), timeStart: (timeStart as! Int)))
                     self.myTableView.reloadData()
                 }
             }
@@ -61,12 +68,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     //set up previews
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myList.count
+        return eventMgr.events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier:"table")
-        cell.textLabel?.text = myList[indexPath.row]
+        cell.textLabel?.text = eventMgr.events[indexPath.row].name
         return cell
     }
     // finished setting up previews

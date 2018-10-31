@@ -26,6 +26,7 @@
 		FA37A7CB2186B12600753794 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA37A7CA2186B12600753794 /* GoogleService-Info.plist */; };
 		FA37A7CD2186B2D600753794 /* customSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A7CC2186B2D600753794 /* customSegue.swift */; };
 		FA37A7D12186C1A500753794 /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A7D02186C1A500753794 /* AddEventController.swift */; };
+		FAAA9111218961A90021F341 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA9110218961A80021F341 /* EventManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FA37A7CA2186B12600753794 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA37A7CC2186B2D600753794 /* customSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegue.swift; sourceTree = "<group>"; };
 		FA37A7D02186C1A500753794 /* AddEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
+		FAAA9110218961A80021F341 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				03D5C987217FE2B400510FDF /* CustomCell.swift */,
 				03D5C989217FE2BD00510FDF /* ViewController.swift */,
 				FA37A7D02186C1A500753794 /* AddEventController.swift */,
+				FAAA9110218961A80021F341 /* EventManager.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			files = (
 				628021F2216FA49000CA1168 /* AddTaskController.swift in Sources */,
 				629CA6C1216FA722003DBA7B /* TaskManager.swift in Sources */,
+				FAAA9111218961A90021F341 /* EventManager.swift in Sources */,
 				FA37A7D12186C1A500753794 /* AddEventController.swift in Sources */,
 				628021F0216FA49000CA1168 /* TaskTableController.swift in Sources */,
 				62830E812179135E004FCF65 /* AppDelegate.swift in Sources */,

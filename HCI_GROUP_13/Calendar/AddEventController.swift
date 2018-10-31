@@ -3,14 +3,17 @@
 //  HCI_GROUP_13
 //
 //  Created by alex on 10/28/18.
-//  Copyright © 2018 John Mooney. All rights reserved.
+//  Copyright © 2018 alex. All rights reserved.
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AddEventController: UIViewController {
-
-
+    
+    var ref: DatabaseReference!
+    var databaseHandle:DatabaseHandle?
+    
     @IBOutlet weak var eventTxt: UITextField!
     @IBOutlet weak var startDate: UITextField!
     @IBOutlet weak var endDate: UITextField!
@@ -19,10 +22,10 @@ class AddEventController: UIViewController {
     @IBOutlet weak var endTime: UITextField!
     @IBOutlet weak var descrTxt: UITextField!
     @IBOutlet weak var locText: UITextField!
-    @IBOutlet weak var prioritySelect: UISegmentedControl!
-    @IBOutlet weak var categorySelect: UISegmentedControl!
+    @IBOutlet var prioritySelect: UISegmentedControl!
+    @IBOutlet var categorySelect: UISegmentedControl!
+    @IBOutlet weak var addBtn: UIButton!
     
-
     private var datePicker: UIDatePicker?
     private var datePicker_end: UIDatePicker?
     private var timePicker: UIDatePicker?
@@ -30,6 +33,8 @@ class AddEventController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addBtn.addTarget(self, action: #selector(addButtonClicked), for: UIControl.Event.touchUpInside)
         
         startTime.isUserInteractionEnabled = false;
         endTime.isUserInteractionEnabled = false;
@@ -108,35 +113,78 @@ class AddEventController: UIViewController {
     }
     
     
-    //add task to array
-    @IBAction func buttonAddEvent_Click(sender: UIButton) {
-        let prior = prioritySelect.titleForSegment(at: prioritySelect.selectedSegmentIndex)
-        var priorNum = 0
-        if prior == "Low" {
-            priorNum = 0
+    @objc func addButtonClicked(sender: UIButton) {
+        guard let text = eventTxt.text, !text.isEmpty else {
+            return
         }
-        else if prior == "Medium" {
-            priorNum = 1
+        guard let text2 = startDate.text, !text2.isEmpty else {
+            return
         }
-        else {
-            priorNum = 2
+        guard let text3 = endDate.text, !text3.isEmpty else {
+            return
         }
-        let category = categorySelect.titleForSegment(at: categorySelect.selectedSegmentIndex)
+        guard let text6 = descrTxt.text, !text6.isEmpty else {
+            return
+        }
+        guard let text7 = locText.text, !text7.isEmpty else {
+            return
+        }
+
+        ref = Database.database().reference()
         
-        //taskMgr.addTask(name: eventTxt.text!, desc: descrTxt.text!, loc: locTxt.text!, priority: priorNum, cat: category!)
+        var startT = 0
+        var endT = 0
+        if startTime.text?.isEmpty ?? true {
+            startT = 0
+        } else {
+            startT = Int(convertTimeFormater(startTime.text!))!
+        }
+        if endTime.text?.isEmpty ?? true {
+            endT = 0
+        } else {
+            endT = Int(convertTimeFormater(endTime.text!))!
+        }
+        let startD = Int(convertDateFormater(startDate.text!))
+        
+        let p = prioritySelect.titleForSegment(at: prioritySelect.selectedSegmentIndex)
+        let category = categorySelect.titleForSegment(at: categorySelect.selectedSegmentIndex)
+
+        var timeBool = false
+        if categorySelect.selectedSegmentIndex == 0 {
+            timeBool = true
+        }
+        eventMgr.addEvent(allDay: timeBool, name: eventTxt.text!, description: descrTxt.text!, date: startD!, location: locText.text!, priority: p!, category: category!, timeEnd: endT, timeStart: startT)
+        
+        let newEvent = [
+            "allDay" : timeBool,
+            "name" : eventTxt.text!,
+            "description": descrTxt.text!,
+            "date": startD!,
+            "location": locText.text!,
+            "priority": p!,
+            "category": category!,
+            "timeEnd": endT,
+            "timeStart": startT,
+            "notify": "none"
+            ] as [String : Any]
+        ref.child("CalendarView").childByAutoId().setValue(newEvent)
         
         self.view.endEditing(true)
         
+        //reset defaults
         eventTxt.text = ""
+        startDate.text = ""
+        endDate.text = ""
+        startTime.text = ""
+        endTime.text = ""
         descrTxt.text = ""
         locText.text = ""
+        timeSelect.selectedSegmentIndex = 0
         prioritySelect.selectedSegmentIndex = 0
         categorySelect.selectedSegmentIndex = 0
-        
-        
     }
     
-    //descelect type
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -150,7 +198,23 @@ class AddEventController: UIViewController {
         
     }
     
-    
+
+    func convertDateFormater(_ date: String) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        let date = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "yyyyMMdd"
+        return  dateFormatter.string(from: date!)
+    }
+    func convertTimeFormater(_ date: String) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let date = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "HHmm"
+        return  dateFormatter.string(from: date!)
+    }
 }
 
 public extension UIImage {
