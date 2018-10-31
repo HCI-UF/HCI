@@ -111,7 +111,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kx6-R3-48o">
-                                                            <rect key="frame" x="37.5" y="30" width="40" height="40"/>
+                                                            <rect key="frame" x="37.5" y="29.5" width="40" height="40"/>
                                                             <color key="backgroundColor" red="0.98431372549999996" green="0.78823529410000004" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="NrM-5d-uTo"/>
@@ -124,7 +124,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-Yh-k8V">
-                                                            <rect key="frame" x="36.5" y="39.5" width="42" height="21"/>
+                                                            <rect key="frame" x="36.5" y="39" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -165,7 +165,7 @@
                                     <color key="titleColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MQG-rF-Bti" kind="show" id="2dr-DZ-WE4"/>
+                                    <segue destination="MQG-rF-Bti" kind="show" id="YKl-cw-TsJ"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Q9W-GD-OG8">
@@ -340,7 +340,6 @@
                                 <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="buttonAddTask_ClickWithSender:" destination="MQG-rF-Bti" eventType="touchUpInside" id="VQg-eH-rxm"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="RJO-Y8-lbx"/>
                                 </connections>
                             </button>
@@ -381,6 +380,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add New" image="second" id="1Hx-YZ-0gb"/>
                     <connections>
+                        <outlet property="addBtn" destination="v0o-gY-lwD" id="1Pa-TE-p9L"/>
                         <outlet property="categorySelect" destination="CuD-76-sn4" id="fgm-3h-1pa"/>
                         <outlet property="descrTxt" destination="w8U-2F-xqV" id="YvI-As-03e"/>
                         <outlet property="endDate" destination="SQU-Bg-51n" id="Dfa-eI-Gsj"/>
@@ -402,7 +402,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2dr-DZ-WE4"/>
-        <segue reference="LgE-Av-hYD"/>
+        <segue reference="RJO-Y8-lbx"/>
     </inferredMetricsTieBreakers>
 </document>
