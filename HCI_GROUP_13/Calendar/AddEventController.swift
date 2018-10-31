@@ -14,6 +14,7 @@ class AddEventController: UIViewController {
     @IBOutlet weak var eventTxt: UITextField!
     @IBOutlet weak var startDate: UITextField!
     @IBOutlet weak var endDate: UITextField!
+    @IBOutlet weak var timeSelect: UISegmentedControl!
     @IBOutlet weak var startTime: UITextField!
     @IBOutlet weak var endTime: UITextField!
     @IBOutlet weak var descrTxt: UITextField!
@@ -29,6 +30,11 @@ class AddEventController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startTime.isUserInteractionEnabled = false;
+        endTime.isUserInteractionEnabled = false;
+        startTime.backgroundColor = UIColor(red:0.71, green:0.71, blue:0.71, alpha:0.4)
+        endTime.backgroundColor = UIColor(red:0.71, green:0.71, blue:0.71, alpha: 0.4)
         
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
@@ -70,6 +76,7 @@ class AddEventController: UIViewController {
         //view.endEditing(true)
     }
     
+    
     @objc func timeChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
@@ -80,6 +87,24 @@ class AddEventController: UIViewController {
             endTime.text = dateFormatter.string(from: sender.date)
         }
         //view.endEditing(true)
+    }
+    
+    
+    @IBAction func timeSelectChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0: // All day
+            startTime.isUserInteractionEnabled = false
+            endTime.isUserInteractionEnabled = false
+            startTime.backgroundColor = UIColor(red:0.71, green:0.71, blue:0.71, alpha: 0.4)
+            endTime.backgroundColor = UIColor(red:0.71, green:0.71, blue:0.71, alpha: 0.4)
+        case 1: // Select times
+            startTime.isUserInteractionEnabled = true
+            endTime.isUserInteractionEnabled = true
+            startTime.backgroundColor = UIColor.white
+            endTime.backgroundColor = UIColor.white
+        default:
+            break
+        }
     }
     
     
@@ -126,4 +151,18 @@ class AddEventController: UIViewController {
     }
     
     
+}
+
+public extension UIImage {
+    public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+        let rect = CGRect(origin: .zero, size: size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        color.setFill()
+        UIRectFill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        guard let cgImage = image?.cgImage else { return nil }
+        self.init(cgImage: cgImage)
+    }
 }
