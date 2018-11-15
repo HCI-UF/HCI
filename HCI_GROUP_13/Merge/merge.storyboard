@@ -17,10 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw9-mq-PHZ" userLabel="Next Event Button">
+                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw9-mq-PHZ" userLabel="Next Event Button">
                                 <rect key="frame" x="238" y="515" width="48" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="right"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="NC1-2h-YVf"/>
+                                    <constraint firstAttribute="width" constant="48" id="sVe-UI-H4j"/>
+                                </constraints>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.2274509804" green="0.16078431369999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -28,9 +31,8 @@
                                     <action selector="prevNextEvent:" destination="d50-Lo-09E" eventType="touchUpInside" id="0tv-YI-JcM"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxB-iq-zTh" userLabel="Prev Event Button">
+                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxB-iq-zTh" userLabel="Prev Event Button">
                                 <rect key="frame" x="87" y="515" width="74" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="left"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Previous">
@@ -40,20 +42,18 @@
                                     <action selector="prevNextEvent:" destination="d50-Lo-09E" eventType="touchUpInside" id="Nqa-1Q-PGi"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3o-p4-dNE">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3o-p4-dNE">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Merge" id="RdG-Xk-uUI"/>
+                                    <navigationItem title="Dashboard" id="RdG-Xk-uUI"/>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nRx-F9-kDs">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRx-F9-kDs">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Sort Category" id="oXe-3S-wnt">
                                         <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,9 +71,8 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-Ra-QJ0" userLabel="TaskDisplay">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-Ra-QJ0" userLabel="TaskDisplay">
                                 <rect key="frame" x="0.0" y="140" width="375" height="358"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-As-JWu">
                                         <rect key="frame" x="46" y="48" width="282" height="262"/>
@@ -138,9 +137,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" label="v"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-MU-9sG" userLabel="Event">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-MU-9sG" userLabel="Event">
                                 <rect key="frame" x="0.0" y="140" width="375" height="358"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSC-SN-xub" userLabel="ExpandEventButton">
                                         <rect key="frame" x="46" y="48" width="282" height="262"/>
@@ -235,15 +233,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" label="v"/>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="xGs-51-cvF">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="xGs-51-cvF">
                                 <rect key="frame" x="0.0" y="630" width="375" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" red="0.73070302929999997" green="0.69996213870000001" blue="0.78948753240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEC-Uk-CLh" userLabel="categoryLabel">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEC-Uk-CLh" userLabel="categoryLabel">
                                 <rect key="frame" x="16" y="108" width="70" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -257,6 +253,32 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wtr-MU-9sG" firstAttribute="bottom" secondItem="0cb-Ra-QJ0" secondAttribute="bottom" id="11B-dr-duj"/>
+                            <constraint firstItem="Sw9-mq-PHZ" firstAttribute="baseline" secondItem="DxB-iq-zTh" secondAttribute="firstBaseline" id="3X9-Nr-Nk9"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="bottom" secondItem="XEC-Uk-CLh" secondAttribute="top" id="4gM-4P-DAS"/>
+                            <constraint firstAttribute="bottom" secondItem="wtr-MU-9sG" secondAttribute="bottom" constant="169" id="AJS-zg-WbQ"/>
+                            <constraint firstItem="Sw9-mq-PHZ" firstAttribute="top" secondItem="DxB-iq-zTh" secondAttribute="top" id="AYQ-nz-Ug5"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="top" secondItem="l3o-p4-dNE" secondAttribute="bottom" id="CKI-Yt-9oj"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="top" secondItem="Gl6-LZ-KvS" secondAttribute="top" constant="64" id="DkY-dm-w4F"/>
+                            <constraint firstItem="xGs-51-cvF" firstAttribute="top" secondItem="Sw9-mq-PHZ" secondAttribute="bottom" constant="60" id="GNr-Ee-JEe"/>
+                            <constraint firstItem="pAh-fb-FQO" firstAttribute="trailing" secondItem="Sw9-mq-PHZ" secondAttribute="trailing" constant="89" id="JXy-kn-AQ4"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="Gl6-LZ-KvS" secondAttribute="leading" id="Mge-be-7TN"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="l3o-p4-dNE" secondAttribute="trailing" id="Oaf-nj-HEn"/>
+                            <constraint firstItem="XEC-Uk-CLh" firstAttribute="leading" secondItem="Gl6-LZ-KvS" secondAttribute="leadingMargin" id="PjT-d8-pu6"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="wtr-MU-9sG" secondAttribute="trailing" id="TSK-K0-dSA"/>
+                            <constraint firstItem="Sw9-mq-PHZ" firstAttribute="top" secondItem="wtr-MU-9sG" secondAttribute="bottom" constant="17" id="VBU-OR-GZU"/>
+                            <constraint firstAttribute="trailing" secondItem="nRx-F9-kDs" secondAttribute="trailing" id="Xed-si-KcA"/>
+                            <constraint firstItem="0cb-Ra-QJ0" firstAttribute="top" secondItem="XEC-Uk-CLh" secondAttribute="bottom" constant="11" id="a4g-Aw-gRZ"/>
+                            <constraint firstItem="Sw9-mq-PHZ" firstAttribute="leading" secondItem="DxB-iq-zTh" secondAttribute="trailing" constant="77" id="ac4-4l-WMc"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="l3o-p4-dNE" secondAttribute="leading" id="dgV-vH-jie"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="0cb-Ra-QJ0" secondAttribute="trailing" id="hiP-df-UO0"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="xGs-51-cvF" secondAttribute="leading" id="l7W-D4-H8o"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="wtr-MU-9sG" secondAttribute="leading" id="syi-LA-obt"/>
+                            <constraint firstItem="wtr-MU-9sG" firstAttribute="top" secondItem="0cb-Ra-QJ0" secondAttribute="top" id="uBT-a4-nxp"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="0cb-Ra-QJ0" secondAttribute="leading" id="ue5-eT-OGk"/>
+                            <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="xGs-51-cvF" secondAttribute="trailing" id="ueF-6Z-Qiq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pAh-fb-FQO"/>
                     </view>
                     <connections>
