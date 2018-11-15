@@ -42,7 +42,7 @@ class MergeView: UIViewController {
     var ref: DatabaseReference!
     var databaseHandle:DatabaseHandle?
     
-    struct task{
+    struct Mtask{
         
         var name: String
         var description: String
@@ -66,7 +66,7 @@ class MergeView: UIViewController {
         
     }
     
-    var tasks = [task]()
+    var tasks = [Mtask]()
     var events = [event]()
     var merged = [Any]()
     
@@ -123,12 +123,12 @@ class MergeView: UIViewController {
         
         let currStruct = merged[iterator]
         
-        if currStruct is task{
+        if currStruct is Mtask{
             
             showTask.isHidden = false
             showEvent.isHidden = true
             
-            let currTask = currStruct as! task
+            let currTask = currStruct as! Mtask
             
             
             taskName.text = currTask.name
@@ -256,7 +256,7 @@ class MergeView: UIViewController {
         
         for i in 0 ..< tasks.count{
             
-            let iTask = sortedTasks[i] as! task
+            let iTask = sortedTasks[i] as! Mtask
             var dateTemp = Int(dateFormat)
             
             if(iTask.priority == 1){ //low
@@ -273,7 +273,7 @@ class MergeView: UIViewController {
             
             for j in 0 ..< sorted.count{
                 
-                if(sorted[j] is task){
+                if(sorted[j] is Mtask){
                     continue
                 }
                 
@@ -365,7 +365,7 @@ class MergeView: UIViewController {
         
         self.tasks.removeAll()
         
-        var currTask = task(name: "", description: "", category: "", priority: 0, remind: "")
+        var currTask = Mtask(name: "", description: "", category: "", priority: 0, remind: "")
         
         ref = Database.database().reference()
         
@@ -427,6 +427,7 @@ class MergeView: UIViewController {
         
         updateEventsList()
         updateTaskList()
+        getLocalTasks()
         
 
     
@@ -531,9 +532,9 @@ class MergeView: UIViewController {
         
             var tempPriority = ""
         
-            if merged[i] is task{
+            if merged[i] is Mtask{
                 
-                let currTask = merged[i] as! task
+                let currTask = merged[i] as! Mtask
                 
                 if(currTask.priority == 1){
                     
@@ -586,9 +587,9 @@ class MergeView: UIViewController {
             
             var tempCategory = ""
             
-            if merged[i] is task{
+            if merged[i] is Mtask{
                 
-                let currTask = merged[i] as! task
+                let currTask = merged[i] as! Mtask
                
                 tempCategory = currTask.category
                
@@ -674,6 +675,40 @@ class MergeView: UIViewController {
     
     
     
+    func getLocalTasks(){
+        
+        var localTasks = [task]()
+        
+        localTasks = taskMgr.tasks
+        
+        let localSize = localTasks.count
+        
+        
+        for i in 0..<localSize{
+            
+            let currTask = localTasks[i]
+            let desc = currTask.desc
+            let cat = currTask.cat
+            let prio = integer_t(currTask.priority) + 1
+            let name = currTask.name
+            
+            
+            let currMtask = Mtask(name: name
+                , description: desc
+                , category: cat
+                , priority: prio
+                , remind: "")
+            
+            
+            
+            
+            tasks.append(currMtask);
+            merged.append(currMtask);
+        }
+    
+    }
+    
+    
     
     
     
@@ -721,7 +756,5 @@ class MergeView: UIViewController {
         
     }
     */
-    
-    
 
 }
