@@ -233,11 +233,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" label="v"/>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="xGs-51-cvF">
-                                <rect key="frame" x="0.0" y="630" width="375" height="37"/>
-                                <color key="pageIndicatorTintColor" red="0.73070302929999997" green="0.69996213870000001" blue="0.78948753240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEC-Uk-CLh" userLabel="categoryLabel">
                                 <rect key="frame" x="16" y="108" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -251,6 +246,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="xGs-51-cvF">
+                                <rect key="frame" x="0.0" y="630" width="375" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.73070302929999997" green="0.69996213870000001" blue="0.78948753240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -264,6 +264,7 @@
                             <constraint firstItem="xGs-51-cvF" firstAttribute="top" secondItem="Sw9-mq-PHZ" secondAttribute="bottom" constant="60" id="GNr-Ee-JEe"/>
                             <constraint firstItem="pAh-fb-FQO" firstAttribute="trailing" secondItem="Sw9-mq-PHZ" secondAttribute="trailing" constant="89" id="JXy-kn-AQ4"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="Gl6-LZ-KvS" secondAttribute="leading" id="Mge-be-7TN"/>
+                            <constraint firstItem="xGs-51-cvF" firstAttribute="bottom" secondItem="pAh-fb-FQO" secondAttribute="bottom" id="Mz2-JW-3w0"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="l3o-p4-dNE" secondAttribute="trailing" id="Oaf-nj-HEn"/>
                             <constraint firstItem="XEC-Uk-CLh" firstAttribute="leading" secondItem="Gl6-LZ-KvS" secondAttribute="leadingMargin" id="PjT-d8-pu6"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="wtr-MU-9sG" secondAttribute="trailing" id="TSK-K0-dSA"/>

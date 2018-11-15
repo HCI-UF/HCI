@@ -169,7 +169,12 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Q9W-GD-OG8">
-                                <rect key="frame" x="168" y="629.5" width="39" height="37.5"/>
+                                <rect key="frame" x="0.0" y="629.5" width="375" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37.5" id="7P8-zz-U53"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="Ut9-cZ-rTW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="xfJ-3K-zQH"/>
+                                </constraints>
                                 <color key="pageIndicatorTintColor" red="0.73070302929999997" green="0.69996213870000001" blue="0.78948753240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
@@ -207,6 +212,7 @@
                             <constraint firstItem="OMV-0C-7S1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GgJ-VS-KGN"/>
                             <constraint firstItem="Byn-e8-8AW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="KgF-u7-nXf"/>
                             <constraint firstAttribute="leading" secondItem="OMV-0C-7S1" secondAttribute="leading" id="KnW-Ho-ZTT"/>
+                            <constraint firstItem="Q9W-GD-OG8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Vgj-LR-tLf"/>
                             <constraint firstItem="M3y-eJ-G5J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zvy-CK-iiD"/>
                             <constraint firstItem="M3y-eJ-G5J" firstAttribute="top" secondItem="OMV-0C-7S1" secondAttribute="bottom" constant="5" id="bFg-Vu-kgU"/>
                             <constraint firstItem="Q9W-GD-OG8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vqg-bV-DDL"/>
@@ -402,6 +408,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="YKl-cw-TsJ"/>
         <segue reference="RJO-Y8-lbx"/>
     </inferredMetricsTieBreakers>
 </document>
