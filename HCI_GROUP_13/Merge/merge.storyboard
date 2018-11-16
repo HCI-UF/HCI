@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d50-Lo-09E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d50-Lo-09E">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -223,9 +223,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By School" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKF-Qm-Ae0" userLabel="priorityLabel">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By School" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKF-Qm-Ae0" userLabel="priorityLabel">
                                 <rect key="frame" x="282" y="119" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -259,6 +258,7 @@
                         <constraints>
                             <constraint firstItem="wtr-MU-9sG" firstAttribute="bottom" secondItem="0cb-Ra-QJ0" secondAttribute="bottom" id="11B-dr-duj"/>
                             <constraint firstItem="Sw9-mq-PHZ" firstAttribute="baseline" secondItem="DxB-iq-zTh" secondAttribute="firstBaseline" id="3X9-Nr-Nk9"/>
+                            <constraint firstItem="AKF-Qm-Ae0" firstAttribute="baseline" secondItem="XEC-Uk-CLh" secondAttribute="baseline" id="4VM-3p-c1X"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="bottom" secondItem="XEC-Uk-CLh" secondAttribute="top" id="4gM-4P-DAS"/>
                             <constraint firstAttribute="bottom" secondItem="wtr-MU-9sG" secondAttribute="bottom" constant="169" id="AJS-zg-WbQ"/>
                             <constraint firstItem="Sw9-mq-PHZ" firstAttribute="top" secondItem="DxB-iq-zTh" secondAttribute="top" id="AYQ-nz-Ug5"/>
@@ -269,6 +269,7 @@
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="l3o-p4-dNE" secondAttribute="trailing" id="Oaf-nj-HEn"/>
                             <constraint firstItem="XEC-Uk-CLh" firstAttribute="leading" secondItem="Gl6-LZ-KvS" secondAttribute="leadingMargin" id="PjT-d8-pu6"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="wtr-MU-9sG" secondAttribute="trailing" id="TSK-K0-dSA"/>
+                            <constraint firstItem="AKF-Qm-Ae0" firstAttribute="trailing" secondItem="Gl6-LZ-KvS" secondAttribute="trailingMargin" id="UrM-B8-IG9"/>
                             <constraint firstItem="Sw9-mq-PHZ" firstAttribute="top" secondItem="wtr-MU-9sG" secondAttribute="bottom" constant="17" id="VBU-OR-GZU"/>
                             <constraint firstAttribute="trailing" secondItem="nRx-F9-kDs" secondAttribute="trailing" id="Xed-si-KcA"/>
                             <constraint firstItem="0cb-Ra-QJ0" firstAttribute="top" secondItem="XEC-Uk-CLh" secondAttribute="bottom" constant="11" id="a4g-Aw-gRZ"/>
