@@ -37,6 +37,7 @@ class MergeView: UIViewController {
     @IBOutlet weak var showTask: UIView!
     @IBOutlet weak var showEvent: UIView!
     @IBOutlet var entireView: UIView!
+    @IBOutlet weak var loadButton: UIButton!
     
     
     var ref: DatabaseReference!
@@ -310,6 +311,11 @@ class MergeView: UIViewController {
     }
     
     
+    @IBAction func loadStuff(_ sender: UIButton) {
+        
+        updateView()
+
+    }
     
     
     @IBAction func prevNextEvent(_ sender: UIButton) {
@@ -684,7 +690,7 @@ class MergeView: UIViewController {
         let localSize = localTasks.count
         
         
-        for i in 0..<localSize{
+        for i in 0 ..< localSize{
             
             let currTask = localTasks[i]
             let desc = currTask.desc
@@ -721,10 +727,11 @@ class MergeView: UIViewController {
         prevButton.tag = 0
         nextButton.tag = 1
         
+        iterator = 0
         updateData()
-        //updateView()
+        updateView()
         
-        //scheduledTimerWithTimeInterval()
+        scheduledTimerWithTimeInterval()
         
         super.viewDidLoad()
 
@@ -738,7 +745,7 @@ class MergeView: UIViewController {
         self.view.addGestureRecognizer(rightSwipe)
     }
     
-  /*  var timer = Timer()
+    var timer = Timer()
    
     
     func scheduledTimerWithTimeInterval(){
@@ -746,15 +753,17 @@ class MergeView: UIViewController {
 
         var refreshTimer: Timer!
 
-        refreshTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
+        refreshTimer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: false)
 
     }
     
    @objc func runTimedCode(){
-        updateData()
+    
         updateView()
-        
+    
+        print("hi")
+    
     }
-    */
+    
 
 }

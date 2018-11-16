@@ -182,6 +182,8 @@ class AddEventController: UIViewController {
         timeSelect.selectedSegmentIndex = 0
         prioritySelect.selectedSegmentIndex = 0
         categorySelect.selectedSegmentIndex = 0
+        
+        
     }
     
     
