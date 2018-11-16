@@ -310,14 +310,6 @@ class MergeView: UIViewController {
     
     }
     
-    
-    @IBAction func loadStuff(_ sender: UIButton) {
-        
-        updateView()
-
-    }
-    
-    
     @IBAction func prevNextEvent(_ sender: UIButton) {
         
         //updateMerged()
