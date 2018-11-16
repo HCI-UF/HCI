@@ -36,15 +36,6 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7R2-sP-7hk">
                                 <rect key="frame" x="0.0" y="30" width="375" height="44"/>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5G-d8-hWz">
-                                <rect key="frame" x="219" y="74" width="83" height="30"/>
-                                <state key="normal" title="Sort Priority">
-                                    <color key="titleColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="sortPriorityButtonTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="o9H-xE-hTO"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcV-qY-2wZ">
                                 <rect key="frame" x="16" y="74" width="74" height="30"/>
                                 <state key="normal" title="Sort Name">
@@ -90,15 +81,23 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5G-d8-hWz">
+                                <rect key="frame" x="276" y="74" width="83" height="30"/>
+                                <state key="normal" title="Sort Priority">
+                                    <color key="titleColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sortPriorityButtonTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="o9H-xE-hTO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1bf-Oz-l8W" firstAttribute="top" secondItem="1Oz-b1-H9n" secondAttribute="bottom" constant="45" id="6dy-hA-4FE"/>
                             <constraint firstItem="AcV-qY-2wZ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="AiC-9z-2bI"/>
-                            <constraint firstItem="K5G-d8-hWz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AcV-qY-2wZ" secondAttribute="trailing" constant="8" symbolic="YES" id="E7W-5E-70v"/>
                             <constraint firstItem="7R2-sP-7hk" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="I9W-tu-xNR"/>
                             <constraint firstItem="xVJ-aK-QFU" firstAttribute="trailing" secondItem="1bf-Oz-l8W" secondAttribute="trailing" id="JMt-qo-n9Y"/>
-                            <constraint firstItem="pxt-Mc-AwA" firstAttribute="trailing" secondItem="K5G-d8-hWz" secondAttribute="trailing" constant="73" id="S8J-9y-cWm"/>
+                            <constraint firstItem="K5G-d8-hWz" firstAttribute="leading" secondItem="AcV-qY-2wZ" secondAttribute="trailing" constant="186" id="Mse-uj-6Iq"/>
                             <constraint firstItem="pxt-Mc-AwA" firstAttribute="trailing" secondItem="1bf-Oz-l8W" secondAttribute="trailing" id="Vsr-zc-mNi"/>
                             <constraint firstItem="xVJ-aK-QFU" firstAttribute="top" secondItem="pxt-Mc-AwA" secondAttribute="top" constant="10" id="Weh-Wz-D3j"/>
                             <constraint firstItem="xVJ-aK-QFU" firstAttribute="top" secondItem="7R2-sP-7hk" secondAttribute="top" id="eSD-Ej-BEF"/>
@@ -111,6 +110,7 @@
                             <constraint firstAttribute="trailing" secondItem="7R2-sP-7hk" secondAttribute="trailing" id="tuv-T7-Mse"/>
                             <constraint firstItem="AcV-qY-2wZ" firstAttribute="top" secondItem="7R2-sP-7hk" secondAttribute="bottom" id="wf1-hO-Siy"/>
                             <constraint firstItem="1Oz-b1-H9n" firstAttribute="top" secondItem="AcV-qY-2wZ" secondAttribute="bottom" constant="2" id="xTg-ux-yMI"/>
+                            <constraint firstItem="pxt-Mc-AwA" firstAttribute="trailing" secondItem="K5G-d8-hWz" secondAttribute="trailing" constant="16" id="yfG-ok-WzC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pxt-Mc-AwA"/>
                     </view>
