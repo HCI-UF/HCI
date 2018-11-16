@@ -23,7 +23,20 @@
 		629CA6C1216FA722003DBA7B /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CA6C0216FA722003DBA7B /* TaskManager.swift */; };
 		D6D32FDF2186AB33007A6DF6 /* merge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D32FDD2186AB32007A6DF6 /* merge.storyboard */; };
 		D6D32FE02186AB33007A6DF6 /* MergeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D32FDE2186AB33007A6DF6 /* MergeView.swift */; };
-		FA37A7CB2186B12600753794 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA37A7CA2186B12600753794 /* GoogleService-Info.plist */; };
+		D6D46DBB219DD12A00C547BB /* FirebaseDatabase in Resources */ = {isa = PBXBuildFile; fileRef = D6D46D96219DD12800C547BB /* FirebaseDatabase */; };
+		D6D46DBC219DD12A00C547BB /* JTAppleCalendar in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DAF219DD12800C547BB /* JTAppleCalendar */; };
+		D6D46DBD219DD12A00C547BB /* Firebase in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB0219DD12800C547BB /* Firebase */; };
+		D6D46DBE219DD12A00C547BB /* GoogleUtilities in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB1219DD12800C547BB /* GoogleUtilities */; };
+		D6D46DBF219DD12A00C547BB /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB2219DD12800C547BB /* Headers */; };
+		D6D46DC0219DD12A00C547BB /* FirebaseCore in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB3219DD12900C547BB /* FirebaseCore */; };
+		D6D46DC1219DD12A00C547BB /* GoogleAppMeasurement in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB4219DD12900C547BB /* GoogleAppMeasurement */; };
+		D6D46DC2219DD12A00C547BB /* FirebaseAnalytics in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB5219DD12900C547BB /* FirebaseAnalytics */; };
+		D6D46DC3219DD12A00C547BB /* FirebaseInstanceID in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB6219DD12900C547BB /* FirebaseInstanceID */; };
+		D6D46DC4219DD12A00C547BB /* nanopb in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB7219DD12900C547BB /* nanopb */; };
+		D6D46DC5219DD12A00C547BB /* leveldb-library in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB8219DD12900C547BB /* leveldb-library */; };
+		D6D46DC6219DD12A00C547BB /* Target Support Files in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DB9219DD12900C547BB /* Target Support Files */; };
+		D6D46DC7219DD12A00C547BB /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DBA219DD12A00C547BB /* Manifest.lock */; };
+		D6D46DC9219DD13900C547BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D46DC8219DD13900C547BB /* GoogleService-Info.plist */; };
 		FA37A7CD2186B2D600753794 /* customSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A7CC2186B2D600753794 /* customSegue.swift */; };
 		FA37A7D12186C1A500753794 /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A7D02186C1A500753794 /* AddEventController.swift */; };
 		FAAA9111218961A90021F341 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA9110218961A80021F341 /* EventManager.swift */; };
@@ -43,6 +56,55 @@
 			proxyType = 1;
 			remoteGlobalIDString = 628021E9216FA49000CA1168;
 			remoteInfo = HCI_GROUP_13;
+		};
+		D6D46DA1219DD12800C547BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6D46D97219DD12800C547BB /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3666C8389C9E0932220492D8F0BF8D7;
+			remoteInfo = FirebaseCore;
+		};
+		D6D46DA3219DD12800C547BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6D46D97219DD12800C547BB /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F1E7E77A3D4175F5419B00A69C264CE9;
+			remoteInfo = FirebaseDatabase;
+		};
+		D6D46DA5219DD12800C547BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6D46D97219DD12800C547BB /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FFEDE33B7852C15ACAF1A5058A324E92;
+			remoteInfo = GoogleUtilities;
+		};
+		D6D46DA7219DD12800C547BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6D46D97219DD12800C547BB /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED2C10A2E46B87427CDCB6B58E5C37D6;
+			remoteInfo = JTAppleCalendar;
+		};
+		D6D46DA9219DD12800C547BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6D46D97219DD12800C547BB /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53E5FB6B088955F833D6C9D663F02BD1;
+			remoteInfo = "leveldb-library";
+		};
+		D6D46DAB219DD12800C547BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6D46D97219DD12800C547BB /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEA58E4AB25EC73750B93F2F859B6790;
+			remoteInfo = nanopb;
+		};
+		D6D46DAD219DD12800C547BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6D46D97219DD12800C547BB /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C7086A867C73C406EB41F5E8C904BD17;
+			remoteInfo = "Pods-HCI_GROUP_13";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -71,7 +133,21 @@
 		A41020155692C11C228DF215 /* Pods_HCI_GROUP_13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HCI_GROUP_13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D32FDD2186AB32007A6DF6 /* merge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = merge.storyboard; sourceTree = "<group>"; };
 		D6D32FDE2186AB33007A6DF6 /* MergeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeView.swift; sourceTree = "<group>"; };
-		FA37A7CA2186B12600753794 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D6D46D96219DD12800C547BB /* FirebaseDatabase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseDatabase; path = Pods/FirebaseDatabase; sourceTree = "<group>"; };
+		D6D46D97219DD12800C547BB /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		D6D46DAF219DD12800C547BB /* JTAppleCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = JTAppleCalendar; path = Pods/JTAppleCalendar; sourceTree = "<group>"; };
+		D6D46DB0219DD12800C547BB /* Firebase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Firebase; path = Pods/Firebase; sourceTree = "<group>"; };
+		D6D46DB1219DD12800C547BB /* GoogleUtilities */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleUtilities; path = Pods/GoogleUtilities; sourceTree = "<group>"; };
+		D6D46DB2219DD12800C547BB /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = Pods/Headers; sourceTree = "<group>"; };
+		D6D46DB3219DD12900C547BB /* FirebaseCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseCore; path = Pods/FirebaseCore; sourceTree = "<group>"; };
+		D6D46DB4219DD12900C547BB /* GoogleAppMeasurement */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleAppMeasurement; path = Pods/GoogleAppMeasurement; sourceTree = "<group>"; };
+		D6D46DB5219DD12900C547BB /* FirebaseAnalytics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseAnalytics; path = Pods/FirebaseAnalytics; sourceTree = "<group>"; };
+		D6D46DB6219DD12900C547BB /* FirebaseInstanceID */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseInstanceID; path = Pods/FirebaseInstanceID; sourceTree = "<group>"; };
+		D6D46DB7219DD12900C547BB /* nanopb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = nanopb; path = Pods/nanopb; sourceTree = "<group>"; };
+		D6D46DB8219DD12900C547BB /* leveldb-library */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "leveldb-library"; path = "Pods/leveldb-library"; sourceTree = "<group>"; };
+		D6D46DB9219DD12900C547BB /* Target Support Files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Target Support Files"; path = "Pods/Target Support Files"; sourceTree = "<group>"; };
+		D6D46DBA219DD12A00C547BB /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Manifest.lock; path = Pods/Manifest.lock; sourceTree = "<group>"; };
+		D6D46DC8219DD13900C547BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA37A7CC2186B2D600753794 /* customSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSegue.swift; sourceTree = "<group>"; };
 		FA37A7D02186C1A500753794 /* AddEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
 		FAAA9110218961A80021F341 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
@@ -174,7 +250,7 @@
 				628021F3216FA49000CA1168 /* Main.storyboard */,
 				628021F6216FA49700CA1168 /* Assets.xcassets */,
 				628021F8216FA49700CA1168 /* LaunchScreen.storyboard */,
-				FA37A7CA2186B12600753794 /* GoogleService-Info.plist */,
+				D6D46DC8219DD13900C547BB /* GoogleService-Info.plist */,
 				628021FB216FA49700CA1168 /* Info.plist */,
 				62830E802179135E004FCF65 /* AppDelegate.swift */,
 				FA37A7CC2186B2D600753794 /* customSegue.swift */,
@@ -200,11 +276,39 @@
 			path = HCI_GROUP_13UITests;
 			sourceTree = "<group>";
 		};
+		D6D46D98219DD12800C547BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6D46DA2219DD12800C547BB /* FirebaseCore.framework */,
+				D6D46DA4219DD12800C547BB /* FirebaseDatabase.framework */,
+				D6D46DA6219DD12800C547BB /* GoogleUtilities.framework */,
+				D6D46DA8219DD12800C547BB /* JTAppleCalendar.framework */,
+				D6D46DAA219DD12800C547BB /* leveldb.framework */,
+				D6D46DAC219DD12800C547BB /* nanopb.framework */,
+				D6D46DAE219DD12800C547BB /* Pods_HCI_GROUP_13.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F82DD76858DC15FFF5DE761E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				5BC74D2BDB5F0EF87BE1CE7E /* Pods-HCI_GROUP_13.debug.xcconfig */,
 				44FB211FA7342F7EDF529DA3 /* Pods-HCI_GROUP_13.release.xcconfig */,
+				D6D46DB0219DD12800C547BB /* Firebase */,
+				D6D46DB5219DD12900C547BB /* FirebaseAnalytics */,
+				D6D46DB3219DD12900C547BB /* FirebaseCore */,
+				D6D46D96219DD12800C547BB /* FirebaseDatabase */,
+				D6D46DB6219DD12900C547BB /* FirebaseInstanceID */,
+				D6D46DB4219DD12900C547BB /* GoogleAppMeasurement */,
+				D6D46DB1219DD12800C547BB /* GoogleUtilities */,
+				D6D46DB2219DD12800C547BB /* Headers */,
+				D6D46DAF219DD12800C547BB /* JTAppleCalendar */,
+				D6D46DB8219DD12900C547BB /* leveldb-library */,
+				D6D46DBA219DD12A00C547BB /* Manifest.lock */,
+				D6D46DB7219DD12900C547BB /* nanopb */,
+				D6D46D97219DD12800C547BB /* Pods.xcodeproj */,
+				D6D46DB9219DD12900C547BB /* Target Support Files */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -304,6 +408,12 @@
 			mainGroup = 628021E1216FA49000CA1168;
 			productRefGroup = 628021EB216FA49000CA1168 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D6D46D98219DD12800C547BB /* Products */;
+					ProjectRef = D6D46D97219DD12800C547BB /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				628021E9216FA49000CA1168 /* HCI_GROUP_13 */,
@@ -313,17 +423,82 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		D6D46DA2219DD12800C547BB /* FirebaseCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseCore.framework;
+			remoteRef = D6D46DA1219DD12800C547BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6D46DA4219DD12800C547BB /* FirebaseDatabase.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseDatabase.framework;
+			remoteRef = D6D46DA3219DD12800C547BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6D46DA6219DD12800C547BB /* GoogleUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleUtilities.framework;
+			remoteRef = D6D46DA5219DD12800C547BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6D46DA8219DD12800C547BB /* JTAppleCalendar.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JTAppleCalendar.framework;
+			remoteRef = D6D46DA7219DD12800C547BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6D46DAA219DD12800C547BB /* leveldb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = leveldb.framework;
+			remoteRef = D6D46DA9219DD12800C547BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6D46DAC219DD12800C547BB /* nanopb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = nanopb.framework;
+			remoteRef = D6D46DAB219DD12800C547BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6D46DAE219DD12800C547BB /* Pods_HCI_GROUP_13.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_HCI_GROUP_13.framework;
+			remoteRef = D6D46DAD219DD12800C547BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		628021E8216FA49000CA1168 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D46DC3219DD12A00C547BB /* FirebaseInstanceID in Resources */,
+				D6D46DC2219DD12A00C547BB /* FirebaseAnalytics in Resources */,
+				D6D46DBE219DD12A00C547BB /* GoogleUtilities in Resources */,
 				D6D32FDF2186AB33007A6DF6 /* merge.storyboard in Resources */,
+				D6D46DC4219DD12A00C547BB /* nanopb in Resources */,
+				D6D46DBC219DD12A00C547BB /* JTAppleCalendar in Resources */,
 				628021FA216FA49700CA1168 /* LaunchScreen.storyboard in Resources */,
+				D6D46DC6219DD12A00C547BB /* Target Support Files in Resources */,
 				628021F7216FA49700CA1168 /* Assets.xcassets in Resources */,
 				03D5C98C217FE2FC00510FDF /* calendar.storyboard in Resources */,
+				D6D46DBD219DD12A00C547BB /* Firebase in Resources */,
+				D6D46DC1219DD12A00C547BB /* GoogleAppMeasurement in Resources */,
+				D6D46DC7219DD12A00C547BB /* Manifest.lock in Resources */,
 				628021F5216FA49000CA1168 /* Main.storyboard in Resources */,
-				FA37A7CB2186B12600753794 /* GoogleService-Info.plist in Resources */,
+				D6D46DC9219DD13900C547BB /* GoogleService-Info.plist in Resources */,
+				D6D46DC5219DD12A00C547BB /* leveldb-library in Resources */,
+				D6D46DBB219DD12A00C547BB /* FirebaseDatabase in Resources */,
+				D6D46DBF219DD12A00C547BB /* Headers in Resources */,
+				D6D46DC0219DD12A00C547BB /* FirebaseCore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +763,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TY2WBW2SKC;
 				INFOPLIST_FILE = HCI_GROUP_13/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,6 +782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TY2WBW2SKC;
 				INFOPLIST_FILE = HCI_GROUP_13/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
