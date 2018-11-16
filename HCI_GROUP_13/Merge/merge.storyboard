@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d50-Lo-09E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d50-Lo-09E">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,8 +43,11 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3o-p4-dNE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="30" width="375" height="44"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BEf-99-7Wz"/>
+                                </constraints>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
@@ -52,27 +55,8 @@
                                     <navigationItem title="Dashboard" id="RdG-Xk-uUI"/>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRx-F9-kDs">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Sort Category" id="oXe-3S-wnt">
-                                        <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="changeCategoryLevel:" destination="d50-Lo-09E" id="ZCt-TM-Shd"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="203" style="plain" systemItem="fixedSpace" id="5u6-Sc-PRM"/>
-                                    <barButtonItem title="Sort Priority" id="59c-ek-5xQ">
-                                        <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="changePriorityLevel:" destination="d50-Lo-09E" id="dgz-uC-Rtd"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-Ra-QJ0" userLabel="TaskDisplay">
-                                <rect key="frame" x="0.0" y="140" width="375" height="358"/>
+                                <rect key="frame" x="0.0" y="150" width="375" height="348"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-As-JWu">
                                         <rect key="frame" x="46" y="48" width="282" height="262"/>
@@ -138,7 +122,7 @@
                                 <accessibility key="accessibilityConfiguration" label="v"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-MU-9sG" userLabel="Event">
-                                <rect key="frame" x="0.0" y="140" width="375" height="358"/>
+                                <rect key="frame" x="0.0" y="150" width="375" height="348"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSC-SN-xub" userLabel="ExpandEventButton">
                                         <rect key="frame" x="46" y="48" width="282" height="262"/>
@@ -233,14 +217,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" label="v"/>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEC-Uk-CLh" userLabel="categoryLabel">
-                                <rect key="frame" x="16" y="108" width="70" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEC-Uk-CLh" userLabel="categoryLabel">
+                                <rect key="frame" x="16" y="119" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By School" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKF-Qm-Ae0" userLabel="priorityLabel">
-                                <rect key="frame" x="282" y="107" width="77" height="21"/>
+                                <rect key="frame" x="282" y="119" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -251,15 +235,25 @@
                                 <color key="pageIndicatorTintColor" red="0.73070302929999997" green="0.69996213870000001" blue="0.78948753240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.34509803919999998" green="0.2901960784" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9h-h2-9hd">
-                                <rect key="frame" x="141" y="599" width="92" height="30"/>
-                                <state key="normal" title="Load">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="loadStuff:" destination="d50-Lo-09E" eventType="touchUpInside" id="dnm-Ak-b2m"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nRx-F9-kDs">
+                                <rect key="frame" x="0.0" y="75" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Sort Category" id="oXe-3S-wnt">
+                                        <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeCategoryLevel:" destination="d50-Lo-09E" id="ZCt-TM-Shd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="203" style="plain" systemItem="fixedSpace" id="5u6-Sc-PRM"/>
+                                    <barButtonItem title="Sort Priority" id="59c-ek-5xQ">
+                                        <color key="tintColor" red="0.82561528500000003" green="0.65305493370000001" blue="0.2469184505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changePriorityLevel:" destination="d50-Lo-09E" id="dgz-uC-Rtd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -269,24 +263,20 @@
                             <constraint firstAttribute="bottom" secondItem="wtr-MU-9sG" secondAttribute="bottom" constant="169" id="AJS-zg-WbQ"/>
                             <constraint firstItem="Sw9-mq-PHZ" firstAttribute="top" secondItem="DxB-iq-zTh" secondAttribute="top" id="AYQ-nz-Ug5"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="top" secondItem="l3o-p4-dNE" secondAttribute="bottom" id="CKI-Yt-9oj"/>
-                            <constraint firstItem="nRx-F9-kDs" firstAttribute="top" secondItem="Gl6-LZ-KvS" secondAttribute="top" constant="64" id="DkY-dm-w4F"/>
-                            <constraint firstItem="i9h-h2-9hd" firstAttribute="leading" secondItem="pAh-fb-FQO" secondAttribute="leading" constant="141" id="Eon-16-AGx"/>
-                            <constraint firstItem="xGs-51-cvF" firstAttribute="top" secondItem="Sw9-mq-PHZ" secondAttribute="bottom" constant="60" id="GNr-Ee-JEe"/>
                             <constraint firstItem="pAh-fb-FQO" firstAttribute="trailing" secondItem="Sw9-mq-PHZ" secondAttribute="trailing" constant="89" id="JXy-kn-AQ4"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="Gl6-LZ-KvS" secondAttribute="leading" id="Mge-be-7TN"/>
                             <constraint firstItem="xGs-51-cvF" firstAttribute="bottom" secondItem="pAh-fb-FQO" secondAttribute="bottom" id="Mz2-JW-3w0"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="l3o-p4-dNE" secondAttribute="trailing" id="Oaf-nj-HEn"/>
-                            <constraint firstItem="xGs-51-cvF" firstAttribute="top" secondItem="i9h-h2-9hd" secondAttribute="bottom" constant="1" id="OcI-jV-oRt"/>
                             <constraint firstItem="XEC-Uk-CLh" firstAttribute="leading" secondItem="Gl6-LZ-KvS" secondAttribute="leadingMargin" id="PjT-d8-pu6"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="wtr-MU-9sG" secondAttribute="trailing" id="TSK-K0-dSA"/>
                             <constraint firstItem="Sw9-mq-PHZ" firstAttribute="top" secondItem="wtr-MU-9sG" secondAttribute="bottom" constant="17" id="VBU-OR-GZU"/>
                             <constraint firstAttribute="trailing" secondItem="nRx-F9-kDs" secondAttribute="trailing" id="Xed-si-KcA"/>
                             <constraint firstItem="0cb-Ra-QJ0" firstAttribute="top" secondItem="XEC-Uk-CLh" secondAttribute="bottom" constant="11" id="a4g-Aw-gRZ"/>
                             <constraint firstItem="Sw9-mq-PHZ" firstAttribute="leading" secondItem="DxB-iq-zTh" secondAttribute="trailing" constant="77" id="ac4-4l-WMc"/>
-                            <constraint firstItem="i9h-h2-9hd" firstAttribute="centerX" secondItem="xGs-51-cvF" secondAttribute="centerX" id="bCV-ZC-usG"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="l3o-p4-dNE" secondAttribute="leading" id="dgV-vH-jie"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="trailing" secondItem="0cb-Ra-QJ0" secondAttribute="trailing" id="hiP-df-UO0"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="xGs-51-cvF" secondAttribute="leading" id="l7W-D4-H8o"/>
+                            <constraint firstItem="l3o-p4-dNE" firstAttribute="top" secondItem="pAh-fb-FQO" secondAttribute="top" constant="10" id="n6L-HW-81m"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="wtr-MU-9sG" secondAttribute="leading" id="syi-LA-obt"/>
                             <constraint firstItem="wtr-MU-9sG" firstAttribute="top" secondItem="0cb-Ra-QJ0" secondAttribute="top" id="uBT-a4-nxp"/>
                             <constraint firstItem="nRx-F9-kDs" firstAttribute="leading" secondItem="0cb-Ra-QJ0" secondAttribute="leading" id="ue5-eT-OGk"/>
@@ -305,7 +295,6 @@
                         <outlet property="eventPrio" destination="d8O-LV-Ira" id="4PV-fV-6kr"/>
                         <outlet property="eventTimeEnd" destination="cmr-bg-H4f" id="LkZ-ua-qer"/>
                         <outlet property="eventTimeStart" destination="0K5-EQ-Un6" id="8Kd-Lh-qXs"/>
-                        <outlet property="loadButton" destination="i9h-h2-9hd" id="86c-6r-mUq"/>
                         <outlet property="nextButton" destination="Sw9-mq-PHZ" id="sjh-47-NSE"/>
                         <outlet property="prevButton" destination="DxB-iq-zTh" id="Rvt-tM-RBY"/>
                         <outlet property="priorityLabel" destination="AKF-Qm-Ae0" id="IZb-5S-rHu"/>
