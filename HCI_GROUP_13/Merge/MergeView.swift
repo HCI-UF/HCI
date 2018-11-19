@@ -238,7 +238,7 @@ class MergeView: UIViewController {
         let year = calendar.component(.year, from: date)
         let month = calendar.component(.month, from: date)
         let day = calendar.component(.day, from: date)
-        let hour = calendar.component(.hour, from: date)
+        //let hour = calendar.component(.hour, from: date)
         //let minutes = calendar.component(.minute, from:date)
        
         let dateFormat = (year * 10000) + (month * 100) + day
@@ -247,7 +247,16 @@ class MergeView: UIViewController {
         
         var sorted = [Any]()
         
-        sorted = events.sorted { (($0.date * 100) + $0.timeStart) < (($1.date * 100) + $1.timeStart) }
+
+        print("---------THIS IS THE LIST BEFORE ----------")
+        print(events)
+
+        
+        sorted = events.sorted { (($0.date * 100) + ($0.timeStart / 100)) < (($1.date * 100) + ($1.timeStart / 100)) }
+        
+        
+        print("---------THIS IS THE LIST AFTER ----------")
+        print(sorted)
         
         var sortedTasks = [Any]()
         
