@@ -176,7 +176,7 @@ class MergeView: UIViewController {
             
             eventDate.text = "Date: " + String(month) + "/" + String(day) + "/" + String(year)
             
-            if(currEvent.allDay){
+            if(currEvent.allDay == false){
                 print(String(Int(currEvent.timeStart)))
                 eventTimeStart.text = "Time Start: " + String(Int(currEvent.timeStart))
                 eventTimeEnd.text = "Time End: " + String(Int(currEvent.timeEnd))
